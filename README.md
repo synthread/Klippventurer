@@ -4,22 +4,22 @@
 It is possible that the onboard processor can run Klipper, but it is significantly less powerful than even the original Raspberry Pi, and will not currently be covered under this guide.
 While I am using Fluidd here instead of OctoPrint, if using a suitably powerful host OctoPrint is an option. There is further info at the end of the guide if you choose to attempt this with the original processor. You are solely responsible for any damage caused by following any part of this guide.
 
-#Part 1 - Modify Your Board
+# Part 1 - Modify Your Board
 
-##You will need:
+## You will need:
 
-+basic to intermediate soldering skills
-+flux
-+wire
-+alcohol (isopropanol, ethanol, methanol) or PCB cleaner
-+cotton swabs and or cotton pads (something to clean the board with)
-+solder wick braid
-+a soldering iron with temperature control
-+a heat gun or heat wand
-+A tool to lift the SBC while desoldering it (tweezers, knife, thin screwdriver, etc.)
-+aluminum tape (if you're worried about damaging surrounding components)
-+LEADED solder (highly recommended)
-+CHIPQUIK or some bismuth solder (optional, but is extremely helpful if you want to make your life easier or don't have great soldering skills or a heat wand)
++ basic to intermediate soldering skills
++ flux
++ wire
++ alcohol (isopropanol, ethanol, methanol) or PCB cleaner
++ cotton swabs and or cotton pads (something to clean the board with)
++ solder wick braid
++ a soldering iron with temperature control
++ a heat gun or heat wand
++ A tool to lift the SBC while desoldering it (tweezers, knife, thin screwdriver, etc.)
++ aluminum tape (if you're worried about damaging surrounding components)
++ LEADED solder (highly recommended)
++ CHIPQUIK or some bismuth solder (optional, but is extremely helpful if you want to make your life easier or don't have great soldering skills or a heat wand)
 
 Step 0: Remove the board from the printer and place it on a nice heat resistant surface.
 
@@ -35,17 +35,17 @@ Step 4: Apply fresh solder to the pads in the diagram (ADV-VOX-Pin-Mod.png) and 
 #Part 2 - Installing Klipper and establishing a link to your host
 ##Note - FLASH YOUR HOST BOARD BEFORE DOING THIS. I recommend Fluidd Pi. https://github.com/fluidd-core/FluiddPI
 
-##You will need: 
+## You will need: 
 
-+A flashed host board (probably a Raspberry Pi Model 2, 3, or 4) (If you go the route of attempting to use an unmodified board, open an issue if you need assistance, +I'll update the guide if you're successful)
-+some wire
-+female Dupont pins, 2.54mm pitch, and 2 JST XH 4 pin female connectors
-+Optional - 2 single pin female Dupont header connectors for powering the Pi internally
-+a crimping tool for said pins
-+wire strippers will be helpful but you could use scissors, pliers, nail clippers, a knife, a lighter, etc.
-+a 24 volt input capable buck converter set to 5.1 volts output
-+an ST-Link V2 programmer (optional, can be helpful)
-+STM32CubeProgrammer installed on your computer (or an alternative if you prefer)
++ A flashed host board (probably a Raspberry Pi Model 2, 3, or 4) (If you go the route of attempting to use an unmodified board, open an issue if you need assistance, + I'll update the guide if you're successful)
++ some wire
++ female Dupont pins, 2.54mm pitch, and 2 JST XH 4 pin female connectors
++ Optional - 2 single pin female Dupont header connectors for powering the Pi internally
++ a crimping tool for said pins
++ wire strippers will be helpful but you could use scissors, pliers, nail clippers, a knife, a lighter, etc.
++ a 24 volt input capable buck converter set to 5.1 volts output
++ an ST-Link V2 programmer (optional, can be helpful)
++ STM32CubeProgrammer installed on your computer (or an alternative if you prefer)
 
 Step 0: Locate the BOOT0 and 3.3v pins on your mainboard as indicated in the diagram (ADV-VOX-Pin-Mod.png) solder a wire across these two pins or carefully bridge the two with tweezers when the guide says to
 
@@ -62,7 +62,7 @@ Step 3b: Select the "Open file" tab once more. Select your Klipper.bin file. (I 
 Step 4: Measure 4 wires of about 4-6 inches in length, strip both ends of each just enough for the end to be exposed inside the Dupont connector (about 1mm). Crimp a pin onto both ends of each wire.
 Insert these wires into the JST connectors as shown in the diagram. Pay close attention to serial TX on the Pi being connected to RX on the main board. TX stands for "transmit" and RX for "receive" so these need to be crossed TX>RX and RX>TX.
 
-##If you want a neat and tidy internal power connection to the Pi, complete Step 5.
+## If you want a neat and tidy internal power connection to the Pi, complete Step 5.
 
 Step 5: Remove the bottom plastic panel of the printer to expose the screw terminals on the power supply.
 Unscrew the positive and negative 24 volt output screws.
@@ -79,7 +79,7 @@ Optional Step: Add an antenna connector to your Pi if it doesn't already have on
 More info here- https://hackaday.io/project/10091-raspberry-pi-3-external-antenna
 
 
-#Part 3 - The Easy Part
+# Part 3 - The Easy Part
 
 Step 0: Just rename Adventurer-3.cfg to printer.cfg and place it inside Fluidd Pi's config directory, or your home directory if using OctoPi + Klipper.
 
@@ -92,7 +92,7 @@ Step 3: Profit.
 
 
 
-#Potential future additions:
+# Potential future additions:
 
 Replacing the MediaTek SBC with a Raspberry Pi Compute Module 4 interface board to make this entire process way easier and super quick. (quite possibly)
 
