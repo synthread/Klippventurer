@@ -12,7 +12,7 @@ While I am using Fluidd here instead of OctoPrint, if using a suitably powerful 
 + flux
 + wire
 + alcohol (isopropanol, methanol) for cleaning
-+ alcohol (ethanol) for you
++ alcohol (ethanol) for you (you'll need it)
 + cotton swabs and or cotton pads (something to clean the board with)
 + solder wick braid
 + a soldering iron with temperature control
