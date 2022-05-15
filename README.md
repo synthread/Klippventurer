@@ -17,7 +17,7 @@ While I am using Fluidd here instead of OctoPrint, if using a suitably powerful 
 + a soldering iron with temperature control
 + a heat gun or heat wand
 + A tool to lift the SBC while desoldering it (tweezers, knife, thin screwdriver, etc.)
-+ aluminum tape (if you're worried about damaging surrounding components)
++ aluminum or kapton tape (if you're worried about damaging surrounding components)
 + LEADED solder (highly recommended)
 + CHIPQUIK or some bismuth solder (optional, but is extremely helpful if you want to make your life easier or don't have great soldering skills or a heat wand)
 
