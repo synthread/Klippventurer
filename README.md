@@ -55,9 +55,9 @@ Alternate Step 1: Connect your serial adapter to the serial port on your mainboa
 
 Step 2: Open STM32CubeProgrammer "CubeProg".
 
-If ST-LINK: Select at the top right ST-LINK. You may need to update the ST-LINK if it's brand new. Port - SWD, Mode - Hot Plug. Reset Mode - Software. If using tweezers, tweeze here. Hit Connect.
+If ST-LINK: Select at the top right ST-LINK. You may need to update the ST-LINK if it's brand new. Port - SWD, Mode - Hot Plug. Reset Mode - Software. If using tweezers, tweeze here. Hit Connect. Remove tweezers.
 
-If Serial: Select at the top right UART. Find your serial port name e.g. "COM1" and set Baudrate to 115200. Tweezer time is now. Hit Connect.
+If Serial: Select at the top right UART. Find your serial port name e.g. "COM1" and set Baudrate to 115200. Tweezer time is now. Hit Connect. Remove tweezers.
 
 Step 3a: Select the "Open file" tab at the top of CubeProg. Select your bootloader, STM32Duino.bin and under the Download dropdown, make sure Address is set to 0x08000000 then click Download.
 Step 3b: Select the "Open file" tab once more. Select your Klipper.bin file. (I have provided one, but you should really compile your own on the Raspberry Pi or other host or you'll probably get a version mismatch.) Select the Download dropdown and set the Address to 0x8002000 this time. Hit download again, and if everything is successful you can remove your BOOT0 DFU jumper and reinstall the mainboard in your printer.
