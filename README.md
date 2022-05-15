@@ -11,7 +11,8 @@ While I am using Fluidd here instead of OctoPrint, if using a suitably powerful 
 + basic to intermediate soldering skills
 + flux
 + wire
-+ alcohol (isopropanol, ethanol, methanol) or PCB cleaner
++ alcohol (isopropanol, methanol) for cleaning
++ alcohol (ethanol) for you
 + cotton swabs and or cotton pads (something to clean the board with)
 + solder wick braid
 + a soldering iron with temperature control
