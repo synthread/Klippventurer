@@ -30,7 +30,11 @@ Step 2: Use your heat gun on the low setting or heat wand on high (400-500C) wit
 
 Step 3: Apply flux to your pads and clean them off using your soldering iron and your solder wick. Clean flux residue off of your board with your alcohol or cleaner.
 
-Step 4: Apply fresh solder to the pads in the diagram (ADV-VOX-Pin-Mod.png) and solder wires bridging the pads indicated. Congratulations, if you've successfully followed the instructions up to this point, you have a 3D printer board ready to flash with the lastest version of Klipper (or the firmware of your choosing) Follow to Part 2 for flashing Klipper and making your bridge cable
+Step 4: Apply fresh solder to the pads in the diagram (ADV-VOX-Pin-Mod.png) and solder wires bridging the pads indicated.
+
+![Pin Mod Diagram](https://github.com/VioSynthax/Adventurer-Voxel-Klipper/raw/main/ADV-VOX-Pin-Mod.png)
+
+Congratulations, if you've successfully followed the instructions up to this point, you have a 3D printer board ready to flash with the lastest version of Klipper (or the firmware of your choosing) Follow to Part 2 for flashing Klipper and making your bridge cable
 
 # Part 2 - Installing Klipper and establishing a link to your host
 Note - FLASH YOUR HOST BOARD BEFORE DOING THIS. I recommend Fluidd Pi. https://github.com/fluidd-core/FluiddPI
