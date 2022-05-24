@@ -13,13 +13,13 @@ While I am using Fluidd here instead of OctoPrint, if using a suitably powerful 
 + wire
 + alcohol or PCB cleaner
 + cotton swabs and or cotton pads (something to clean the board with)
-+ solder wick braid
++ solder wick braid (helpful but not absolutely necessary)
 + a soldering iron with temperature control
 + a heat gun or heat wand
 + A tool to lift the SBC while desoldering it (tweezers, knife, thin screwdriver, etc.)
 + aluminum or kapton tape (if you're worried about damaging surrounding components)
-+ LEADED solder (highly recommended)
-+ CHIPQUIK or some bismuth solder (optional, but is extremely helpful if you want to make your life easier or don't have great soldering skills or a heat wand)
++ LEADED solder or bismuth solder (highly recommended, any low temp solder will do)
++ optional - CHIPQUIK (if you want to make your life easier, don't have great soldering skills, or don't have a heat wand / gun)
 
 Step 0: Remove the board from the printer and place it on a nice heat resistant surface.
 
