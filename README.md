@@ -11,8 +11,8 @@ While I am using Fluidd here instead of OctoPrint, if using a suitably powerful 
 + insulated wire, preferably silicone
 + a soldering iron with temperature control
 + solder (preferably SnPb or SnBi solder, SnAg is harder to work with)
-+ recommended - paste or liquid flux
 
++ recommended - paste or liquid flux
 + optional - cotton swabs and or cotton pads (something to clean the board with)
 + optional - alcohol or PCB cleaner
 
@@ -21,10 +21,10 @@ Step 0: Remove the board from the printer and place it on your work surface.
 Step 1: Apply flux (if using) and then tin the pads shown in the diagram. If you will be using tweezers for the DFU pads, don't tin those ones.
 
 Step 2: locate the pads in the diagram (ADV-VOX-Pin-Mod.png) and solder wires bridging the pads as indicated. You should now have the following:
-one wire bridging the two pads with the green jumper in the diagram
-one wire bridging the two with the white jumper indicator
-one wire bridging the RST points indicated in the diagram
-If you are using tweezers, leave off the DFU jumper indicated in magenta. If not, solder a jumper
++ one wire bridging the two pads with the green jumper in the diagram
++ one wire bridging the two with the white jumper indicator
++ one wire bridging the RST points indicated in the diagram
++ If you are using tweezers, leave off the DFU jumper indicated in magenta. If not, solder a jumper
 
 ![Pin Mod Diagram](https://github.com/VioSynthax/Adventurer-Voxel-Klipper/raw/main/ADV-VOX-Pin-Mod.png)
 
