@@ -1,5 +1,5 @@
 # Adventurer-Voxel-Klipper
-#### This repository aims to provide a way to flash Klipper to a MonoPrice Voxel or Adventurer 3 3D printer. This can be done by disabling and bypassing the MediaTek SBC with a Raspberry Pi.
+#### This repository aims to provide a way to flash Klipper to a MonoPrice Voxel or Adventurer 3 3D printer. This can be done by disabling the MediaTek module and using a Raspberry Pi in its place.
 
 While I am using Fluidd here instead of OctoPrint, if using a suitably powerful host OctoPrint is an option. There is further info at the end of the guide if you choose to attempt this with the original processor. You are solely responsible for any damage caused by following any part of this guide.
 
@@ -18,13 +18,12 @@ While I am using Fluidd here instead of OctoPrint, if using a suitably powerful 
 
 Step 0: Remove the board from the printer and place it on your work surface.
 
-Step 1: Apply flux (if using) and then tin the pads shown in the diagram. If you will be using tweezers for the DFU pads, don't tin those ones.
+Step 1: Apply flux (if using) and then tin the pads shown in the diagram.
 
 Step 2: locate the pads in the diagram (ADV-VOX-Pin-Mod.png) and solder wires bridging the pads as indicated. You should now have the following:
 + one wire bridging the two pads with the green jumper in the diagram
 + one wire bridging the two with the white jumper indicator
-+ one wire bridging the RST points indicated in the diagram
-+ If you are using tweezers, leave off the DFU jumper indicated in magenta. If not, solder a jumper
++ one wire bridging the DFU points indicated in the diagram
 
 ![Pin Mod Diagram](https://github.com/VioSynthax/Adventurer-Voxel-Klipper/raw/main/ADV-VOX-Pin-Mod.png)
 
@@ -45,15 +44,14 @@ Note - FLASH YOUR HOST BOARD BEFORE DOING THIS. I recommend Fluidd Pi. https://g
 + an ST-Link V2 programmer: https://www.amazon.com/gp/product/B07SQV6VLZ
 + STM32CubeProgrammer installed on your computer (or an alternative if you prefer)
 
-Step 0: Locate the BOOT0 DFU pins on your mainboard as indicated in the diagram (ADV-VOX-Pin-Mod.png) solder a wire across these two pins or carefully bridge the two with tweezers when the guide says to
+Step 0: Locate the BOOT0 DFU pins on your mainboard as indicated in the diagram (ADV-VOX-Pin-Mod.png) solder a wire across these two pins
 
-Step 1: Connect your ST-Link programmer to the ST-Link port on your mainboard (labeled V C D G on the silk screen in the top right corner)
+Step 1: Connect your ST-Link programmer to the ST-Link port on your mainboard. (labeled V C D G on the silk screen in the top right corner) Connect V to 3.3V, G to GND, C to SWCLK, and D to SWDIO. You can use the cable from Step 4 (below) to do this, just leave the plastic connector off of one end. Do take extra care when using bare crimps to not short 3.3V and GND, as they are right next to each other on the clone STLink programmers from Amazon or AliExpress.
+ + If you can't connect, plug the printer's power supply into the mainboard to power it while you are programming. You can also use a DC power supply that outputs between 12 and 24 volts. 12 is plenty for what we're doing here.
 
-Step 2: Open STM32CubeProgrammer "CubeProg" and select at the top right ST-LINK. You may need to update the ST-LINK if it's brand new. Port - SWD, Mode - Hot Plug. Reset Mode - Software. If using tweezers, tweeze now. Hit Connect. Remove tweezers.
+Step 2: Open STM32CubeProgrammer "CubeProg" and select at the top right ST-Link. You may need to update the ST-Link if it's brand new. Port - SWD, Mode - Hot Plug. Reset Mode - Software reset. Hit Connect.
 
-Step 3a: Select the "Open file" tab at the top of CubeProg. Select your bootloader, STM32Duino.bin and under the Download dropdown, make sure Address is set to 0x08000000 then click Download.
-
-Step 3b: Select the "Open file" tab once more. Select your Klipper.bin file. (I have provided one, but you should really compile your own on the Raspberry Pi or other host or you might get a version mismatch.) Select the Download dropdown and set the Address to 0x8002000 this time. Hit download again, and if everything is successful you can remove your BOOT0 DFU jumper (if you soldered one) and reinstall the mainboard in your printer. Don't connect everything yet, you should connect power and test the serial connection with your host first. If successful, reconnect everything.
+Step 3: Select the "Open file" tab at the top of CubeProg. Select your Klipper binary, (Klipper.bin if you use the one I provide) and under the Download dropdown, make sure Address is set to 0x08000000 then click Download. If everything is successful you can remove your BOOT0 DFU jumper (if you soldered one) and reinstall the mainboard in your printer. Don't connect everything yet, you should connect power and test the serial connection with your host first. If successful, reconnect everything.
 
 Step 4: Measure 3 wires of about 4-6 inches in length, strip both ends of each just enough for the end to be exposed inside the Dupont connector (about 1mm). Crimp a pin onto both ends of each wire.
 Insert these 3 wires into the GND, RX, and TX pins on JST connectors as shown in the diagram. Pay close attention to serial TX on the Pi being connected to RX on the main board. TX stands for "transmit" and RX for "receive" so these need to be crossed TX>RX and RX>TX.
