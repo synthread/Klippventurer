@@ -1,86 +1,69 @@
-# Adventurer-Voxel-Klipper
-#### This repository aims to provide a way to flash Klipper to a MonoPrice Voxel or Adventurer 3 3D printer. This can be done by disabling the MediaTek module and using a Raspberry Pi in its place.
+<p align="center">
+  <a>
+    <img src="https://raw.githubusercontent.com/VioSynthax/Adventurer-Voxel-Klipper/2.0-preview/images/klippventurer.svg" alt="Klippventurer logo" height="181">
+    <h1 align="center">Klipper for Adventurer 3</h1>
+  </a>
+</p>
 
-While I am using Fluidd here instead of OctoPrint, if using a suitably powerful host OctoPrint is an option. There is further info at the end of the guide if you choose to attempt this with the original processor. You are solely responsible for any damage caused by following any part of this guide.
-
-# Part 1 - Modify Your Board
-
-## You will need:
+#### You are solely responsible for any damage or injury caused by following any part of this guide.
+### You will need:
 
 + very basic soldering skills
 + insulated wire, preferably silicone
 + a soldering iron with temperature control
 + solder (preferably SnPb or SnBi solder, SnAg is harder to work with)
-
-+ recommended - paste or liquid flux
-+ optional - cotton swabs and or cotton pads (something to clean the board with)
-+ optional - alcohol or PCB cleaner
-
-Step 0: Remove the board from the printer and place it on your work surface.
-
-Step 1: Apply flux (if using) and then tin the pads shown in the diagram.
-
-Step 2: locate the pads in the diagram (ADV-VOX-Pin-Mod.png) and solder wires bridging the pads as indicated. You should now have the following:
-+ one wire bridging the two pads with the green jumper in the diagram
-+ one wire bridging the two with the white jumper indicator
-+ one wire bridging the DFU points indicated in the diagram
-
-![Pin Mod Diagram](https://github.com/VioSynthax/Adventurer-Voxel-Klipper/raw/main/ADV-VOX-Pin-Mod.png)
-
-Congratulations, if you've successfully followed the instructions up to this point, you have a 3D printer board ready to flash with the lastest version of Klipper (or the firmware of your choosing) Follow to Part 2 for flashing Klipper and making your bridge cable
-
-# Part 2 - Installing Klipper and establishing a link to your host
-Note - FLASH YOUR HOST BOARD BEFORE DOING THIS. I recommend Fluidd Pi. https://github.com/fluidd-core/FluiddPI
-
-## You will need: 
-
-+ A flashed host board (probably a Raspberry Pi Model 2, 3, or 4, but anything you can run Klipper on will work)
++ A host with Klipper installed (Pi Zero 2 W, 3, or 4 work best, but anything you can run Klipper on will work)
++ + Use this for easy setup on a Raspberry Pi https://github.com/th33xitus/kiauh
++ a 24 volt input capable buck converter set to 5.1 volts output (unless you want to keep the Pi outside the printer or power it seperately)
++ + here's a good option: https://www.amazon.com/LM2596-Converter-4-0-40V-1-25-37V-Voltmeter%EF%BC%882pcs%EF%BC%89/dp/B085WC5G8N/
++ female Dupont pins, 2.54mm pitch (not needed if soldering directly to Pi Zero)
++ 1x Dupont 8-pin connector (Multiple Dupont connectors with fewer pins work too, or you could solder straight to GPIO pads on Pi Zero)
++ a crimping tool (not needed if soldering directly to Pi Zero)
 + some wire
-+ female Dupont pins, 2.54mm pitch, and 2x JST XH 4-pin female connectors
-+ 2x single pin female Dupont header connectors for powering the Pi
-+ a crimping tool for said pins, here's a cheap one: https://www.amazon.com/gp/product/B088NQV8Z3
-+ wire strippers or something with which to strip your wires
-+ a 24 volt input capable buck converter set to 5.1 volts output, here's a good option: https://www.amazon.com/LM2596-Converter-4-0-40V-1-25-37V-Voltmeter%EF%BC%882pcs%EF%BC%89/dp/B085WC5G8N/
-+ an ST-Link V2 programmer: https://www.amazon.com/gp/product/B07SQV6VLZ
-+ STM32CubeProgrammer installed on your computer (or an alternative if you prefer)
++ + here's a kit with all the connectors, pins, crimping tool, and wire that you'll need
++ + https://www.amazon.com/Qibaok-Crimping-Ratcheting-Crimper-Connectors/dp/B07ZHB4BBY/
+#### Recommended: 
++ paste or liquid flux
++ cotton swabs and or cotton pads (something to clean the board with)
++ alcohol or PCB cleaner
 
-Step 0: Locate the BOOT0 DFU pins on your mainboard as indicated in the diagram (ADV-VOX-Pin-Mod.png) solder a wire across these two pins
-
-Step 1: Connect your ST-Link programmer to the ST-Link port on your mainboard. (labeled V C D G on the silk screen in the top right corner) Connect V to 3.3V, G to GND, C to SWCLK, and D to SWDIO. You can use the cable from Step 4 (below) to do this, just leave the plastic connector off of one end. Do take extra care when using bare crimps to not short 3.3V and GND, as they are right next to each other on the clone STLink programmers from Amazon or AliExpress.
- + If you can't connect, plug the printer's power supply into the mainboard to power it while you are programming. You can also use a DC power supply that outputs between 12 and 24 volts. 12 is plenty for what we're doing here.
-
-Step 2: Open STM32CubeProgrammer "CubeProg" and select at the top right ST-Link. You may need to update the ST-Link if it's brand new. Port - SWD, Mode - Hot Plug. Reset Mode - Software reset. Hit Connect.
-
-Step 3: Select the "Open file" tab at the top of CubeProg. Select your Klipper binary, (Klipper.bin if you use the one I provide) and under the Download dropdown, make sure Address is set to 0x08000000 then click Download. If everything is successful you can remove your BOOT0 DFU jumper (if you soldered one) and reinstall the mainboard in your printer. Don't connect everything yet, you should connect power and test the serial connection with your host first. If successful, reconnect everything.
-
-Step 4: Measure 3 wires of about 4-6 inches in length, strip both ends of each just enough for the end to be exposed inside the Dupont connector (about 1mm). Crimp a pin onto both ends of each wire.
-Insert these 3 wires into the GND, RX, and TX pins on JST connectors as shown in the diagram. Pay close attention to serial TX on the Pi being connected to RX on the main board. TX stands for "transmit" and RX for "receive" so these need to be crossed TX>RX and RX>TX.
-
-Note: Don't connect the 5v line from the serial header to the Pi, it should not be connected.
-
-## If you want a neat and tidy internal power connection to the Pi, complete Step 5.
-
-Step 5: Remove the bottom plastic panel of the printer to expose the screw terminals on the power supply.
-Unscrew the positive and negative 24 volt output screws.
-Prepare two wires for powering your buck converter of about 4 inches. Strip one end about 2mm and the other 1/4 inch.
-Solder the shorter ends to your buck converter's input pads or insert them into its screw terminals, depending on which it has.
-Twist the ends of 1/4 inch of stripped wire to keep them together. Insert under your PSU's output terminals, on top of the spade connectors. Tighten town your terminal screws and tug on the wires and spade connectors to ensure a tight fit. Do NOT tin the wires, this can cause a poor connection and result in arc flash. If you want an even more secure connection, splice these wires into the mainboard supply wires instead.
-Solder another pair of wires about 6 inches in length or more to the output on your buck converter, or insert them into the output screw terminals if your converter has them. Make sure your buck converter is not outputting more than 5.2 volts at this time and no less than 5.1 volts. Pi 1/2 likely only need 5.0 volts, Pi 3/4 may need 5.1 volts. Stay clear of the exposed mains voltage when you test this.
-Strip 1mm off the ends of these output wires, Crimp a single pin Dupont female pin onto each wire's end. Insert each into a female Dupont header connector.
-Connect these wires to the 5V and GND connections on your Pi's GPIO header that aren't taken up by our serial cable we made.
-
-Step 6: INSULATE YOUR PI AND BUCK CONVERTER. You can 3D print cases for these to mount them on the top side of the access plate to sort of hinge open if you'd like, make sure you've cut wires long enough for however you are mounting your host board. If not, cover them in some tape and make sure nothing shorts when you close your access panel. You might even be able to squeeze the Pi somewhere near where the screen of the printer is, you'll need to remove the side to access that spot. I haven't tried, so not sure if there's room
-
-Optional Step: Add an antenna connector to your Pi if it doesn't already have one. Attach the printer's built in WiFi antenna to your Pi.
-More info here- https://hackaday.io/project/10091-raspberry-pi-3-external-antenna
+# Part 1 - Tapping in 🪛
 
 
-# Part 3 - The Easy Part
 
-Step 0: Just rename Adventurer-3.cfg to printer.cfg and place it inside Fluidd Pi's config directory, or your home directory if using OctoPi + Klipper.
+Step 0: Unplug your 3D printer. Remove the bottom plastic cover from the printer (this is so we can access the power supply's DC output to power our Pi). you may choose to remove the board from the printer and place it on your work surface to make soldering easier.
 
-Step 1: Live your hobbyist 3D printing dreams and tune your printer forever instead of actually printing with it. Or print with it. Your choice.
+Step 1: Locate the pads in the diagram (Wiring-diagram.png) and apply flux (if using), then tin the pads.
+![Pin Mod Diagram](https://github.com/VioSynthax/Adventurer-Voxel-Klipper/blob/main/images/Wiring-diagram.png?raw=true)
+Step 2: Solder your wires and solder blob to the pads as indicated. Make sure all 5 wires here are long enough to connect to your Pi, wherever you've chosen to mount it. Strip both ends before soldering to make your life easier later (about 2mm on each end) You should connect the following to your printer's mainboard:
++ one wire to TX (white)
++ one wire to RX (green)
++ one wire to MCU RST (orange)
++ one wire to DFU (purple)
++ one wire to GND (black)
++ one solder blob bridging the RST pad to the GND pad (blue/black) see magnified view
 
-Step 2: ???
+# Part 2 - Connecting to the Pi 🔌
 
-Step 3: Profit.
+Step 0: Klipper should be installed on your Pi, and it should be connected to your WiFi network before proceeding to the next step.
+    
+Step 1: Choose where you would like to mount your buck converter, if you're using one. This will power the Pi when it's installed into the printer's electronics box. Cut a pair of wires (one red, one black) long enough to reach from your buck converter to the printer's power supply. Strip the ends by about 3-5mm. Loosen the screws of the two unused terminals next to your printer board's power cable. Twist the ends of your wires, and bend them into a hook shape. Wrap the hooked end of your black wire around the "V-" screw in a clockwise direction (insert from the left side of the screw). Do the same for your red wire, this time with the "V+" screw terminal. Route these power wires toward the same area as your printer's mainboard.
+
+Step 2: Insert the V+ and V- wires into your buck converter's "IN+" and "IN-" terminals respectively, and tighten down the screw terminals (or solder them on if your buck converter doesn't have screw terminals)
+
+Step 3: Reinstall the bottom cover of the printer, leaving the metal access panel open. Sit your buck converter on the plastic outer shell of the printer with the unit upside-down. (careful with your printer in this orientation, don't go slamming it around. The bed is only mounted on one linear rail) Plug your AC power cable into the printer with the power switch turned off. Make sure your buck converter isn't sitting on a metal surface, then go ahead and flip the power switch to the "on" position. Turn the small potentiometer dial on the potentiometer until the voltage reads 5.1 volts. If your converter doesn't have an LCD voltage readout, use a multimeter. Once the voltage is set, turn the switch off and unplug the printer.
+
+###### If soldering wires directly to Pi Zero, skip step 4 and solder your GPIO connections now (plus a 5.1v wire to your buck converter's OUT+ terminal)
+Step 4: Back over to our mainboard. Prepare your crimp connectors and make sure the ends of your wires soldered to the board are stripped. Crimp a female pin onto each of the 5 wires. Cut one additional wire long enough to reach from near the mainboard's power input plug to the Pi's GPIO header. Strip the ends and crimp a pin onto one of them. Insert all of these wires into an 8-pin Dupont connector EXACTLY in the order shown in the diagram. (Wiring-diagram.png) You should have, in this order: 
+##### Empty, red (5.1v), black (GND), white (TX), green (RX), orange (MCU RST), Empty, purple (DFU)
+You will have an additional loose wire coming from the Dupont connector.
+
+Step 5: Reinstall the mainboard into the printer, and reconnect all of the cables. Connect the loose 5.1v wire from the Dupont connector to the "OUT+" terminal on the buck converter. Wrap the buck converter in kapton tape. Apply double-sided foam tape to the underside, and stick it on the printer's mainboard. Leave the 8-pin Dupont connector loose for the moment. Time to test! Plug the printer back into power, and flip the switch on. The printer shouldn't boot up. Screen should remain black, LEDs should come on, and nothing should happen. If it does boot normally, make sure RST is bridged to GND and try again. Don't work inside the printer with the power cable connected.
+
+Step 6: Apply foam tape to the bottom of the Pi. Make sure the entire bottom is covered in foam tape or you can use Kapton as well if you don't want to use a ton of foam tape if using a full sized Pi. Don't remove the backing from the tape just yet. With the power cable disconnected, connect the 8-pin Dupont connector to the Pi's GPIO header as shown in the diagram. Test fit the Pi by placing it inside the printer's electronics box, next to the buck converter. Make sure both fit inside the case, between the mainboard and the access cover. You can now remove the backing from the foam tape, and stick your Pi to the inside of the metal cover in roughly the same position as it was in while test fitting. Sit the cover loosely onto the bottom of the printer, and do one more test. The LED on the Pi should light up, and the LEDs on the mainboard should as well. Screw on the bottom cover, and that concludes the hardware portion of this guide! Onto part 3 to setup the firmware and software.
+
+
+# Part 3 - The Home Stretch? 🍰
+
+# This part of the guide is unfinished. Watch this repo to receive a notification when it's ready.
+This will involve a script that configures the UART port, builds Klipper.bin for the STM32 inside the printer, and installs it over serial- all automatically. This is a huge departure from the earlier versions of this guide, where an ST-Link programmer was used to manually flash the microcontroller with a bootloader and Klipper firmware, then the Pi needed manual configuration to make serial work. This was janky, overly complicated, and just outright didn't work for most people. I don't want to call the new method foolproof just yet, but I do think it will massively simplify most of the firmware setup.
