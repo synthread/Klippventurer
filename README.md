@@ -12,8 +12,7 @@
 + insulated wire, preferably silicone
 + a soldering iron with temperature control
 + solder (preferably SnPb or SnBi solder, SnAg is harder to work with)
-+ A host with Klipper installed (Pi Zero 2 W, 3, or 4 work best, but anything you can run Klipper on will work)
-+ + Use this for easy setup on a Raspberry Pi https://github.com/th33xitus/kiauh
++ A Raspberry Pi (Zero 2 W, 3, or 4 are best due to their built-in WiFi)
 + a 24 volt input capable buck converter set to 5.1 volts output (unless you want to keep the Pi outside the printer or power it seperately)
 + + here's a good option: https://www.amazon.com/LM2596-Converter-4-0-40V-1-25-37V-Voltmeter%EF%BC%882pcs%EF%BC%89/dp/B085WC5G8N/
 + female Dupont pins, 2.54mm pitch (not needed if soldering directly to Pi Zero)
@@ -46,9 +45,9 @@ Step 2: Solder your wires and solder blob to the pads as indicated. Make sure al
 
 # Part 2 - Connecting to the Pi 🔌
 
-Step 0: Klipper should be installed on your Pi, and it should be connected to your WiFi network before proceeding to the next step.
+Step 0: Download the latest Raspberry Pi Imager from https://www.raspberrypi.com/software/ choose Raspberry Pi OS (32-bit), then click the gear icon and enable SSH, use password authentication (unless you know what you're doing), set your username and password, configure wireless LAN (enter your WiFi SSID and password, choose your wireless LAN country) then save, choose your SD card or USB drive, and write your image. Once done, remove the boot drive and insert it into the Pi.
     
-Step 1: Choose where you would like to mount your buck converter, if you're using one. This will power the Pi when it's installed into the printer's electronics box. Cut a pair of wires (one red, one black) long enough to reach from your buck converter to the printer's power supply. Strip the ends by about 3-5mm. Loosen the screws of the two unused terminals next to your printer board's power cable. Twist the ends of your wires, and bend them into a hook shape. Wrap the hooked end of your black wire around the "V-" screw in a clockwise direction (insert from the left side of the screw). Do the same for your red wire, this time with the "V+" screw terminal. Route these power wires toward the same area as your printer's mainboard.
+Step 1: Choose where you would like to mount your buck converter, if you're using one. I recommend using foam tape to mount it right between the large capacitors / power connector and the MediaTek board. This will power the Pi when it's installed into the printer's electronics box. Cut a pair of wires (one red, one black) long enough to reach from your buck converter to the printer's power supply. Strip the ends by about 3-5mm. Loosen the screws of the two unused terminals next to your printer board's power cable. Twist the ends of your wires, and bend them into a hook shape. Wrap the hooked end of your black wire around the "V-" screw in a clockwise direction (insert from the left side of the screw). Do the same for your red wire, this time with the "V+" screw terminal. Route these power wires toward the same area as your printer's mainboard.
 
 Step 2: Insert the V+ and V- wires into your buck converter's "IN+" and "IN-" terminals respectively, and tighten down the screw terminals (or solder them on if your buck converter doesn't have screw terminals)
 
