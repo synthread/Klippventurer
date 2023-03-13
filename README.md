@@ -1,6 +1,6 @@
 <p align="center">
   <a>
-    <img src="https://raw.githubusercontent.com/VioSynthax/Adventurer-Voxel-Klipper/2.0-preview/images/klippventurer.svg" alt="Klippventurer logo" height="181">
+    <img src="https://raw.githubusercontent.com/VioSynthax/Adventurer-Voxel-Klipper/2.0-preview/images/klippventurer.svg" alt="Klippventurer logo" height="185">
     <h1 align="center">Klipper for Adventurer 3</h1>
   </a>
 </p>
@@ -31,10 +31,11 @@
 
 
 
-Step 0: Unplug your 3D printer. Remove the bottom plastic cover from the printer (this is so we can access the power supply's DC output to power our Pi). you may choose to remove the board from the printer and place it on your work surface to make soldering easier.
+Step 0: Unplug your 3D printer. Remove the bottom plastic cover from the printer (this is so we can access the power supply's DC output to power our Pi). You may choose to remove the board from the printer and place it on your work surface to make soldering easier.
+![Pin Mod Diagram](https://github.com/VioSynthax/Adventurer-Voxel-Klipper/blob/a8485fdaa321842ca7af45ca6d088fc077095493/images/Wiring-diagram.png?raw=true)
 
-Step 1: Locate the pads in the diagram (Wiring-diagram.png) and apply flux (if using), then tin the pads.
-![Pin Mod Diagram](https://github.com/VioSynthax/Adventurer-Voxel-Klipper/blob/main/images/Wiring-diagram.png?raw=true)
+Step 1: Locate the pads in the diagram (Wiring-diagram.png) and apply flux (if using), then tin the pads. Don't use flux on RST>GND or you'll have difficulty making a blob.
+
 Step 2: Solder your wires and solder blob to the pads as indicated. Make sure all 5 wires here are long enough to connect to your Pi, wherever you've chosen to mount it. Strip both ends before soldering to make your life easier later (about 2mm on each end) You should connect the following to your printer's mainboard:
 + one wire to TX (white)
 + one wire to RX (green)
