@@ -12,7 +12,7 @@
 + insulated wire, preferably silicone
 + a soldering iron with temperature control
 + solder (preferably SnPb or SnBi solder, SnAg is harder to work with)
-+ A Raspberry Pi (Zero 2 W, 3, or 4 are best due to their built-in WiFi)
++ A Raspberry Pi (a Pi with built-in WiFi is preferred)
 + a 24 volt input capable buck converter set to 5.1 volts output (unless you want to keep the Pi outside the printer or power it seperately)
 + + here's a good option: https://www.amazon.com/LM2596-Converter-4-0-40V-1-25-37V-Voltmeter%EF%BC%882pcs%EF%BC%89/dp/B085WC5G8N/
 + female Dupont pins, 2.54mm pitch (not needed if soldering directly to Pi Zero)
@@ -33,7 +33,7 @@
 Step 0: Unplug your 3D printer. Remove the bottom plastic cover from the printer (this is so we can access the power supply's DC output to power our Pi). You may choose to remove the board from the printer and place it on your work surface to make soldering easier.
 ![Pin Mod Diagram](https://github.com/VioSynthax/Adventurer-Voxel-Klipper/blob/a8485fdaa321842ca7af45ca6d088fc077095493/images/Wiring-diagram.png?raw=true)
 
-Step 1: Locate the pads in the diagram (Wiring-diagram.png) and apply flux (if using), then tin the pads. Don't use flux on RST>GND or you'll have difficulty making a blob.
+Step 1: Locate the pads in the diagram (Wiring-diagram.png), apply flux, then tin the pads. Don't use flux on RST>GND or you'll have difficulty making a blob.
 
 Step 2: Solder your wires and solder blob to the pads as indicated. Make sure all 5 wires here are long enough to connect to your Pi, wherever you've chosen to mount it. Strip both ends before soldering to make your life easier later (about 2mm on each end) You should connect the following to your printer's mainboard:
 + one wire to TX (white)
@@ -42,6 +42,7 @@ Step 2: Solder your wires and solder blob to the pads as indicated. Make sure al
 + one wire to DFU (purple)
 + one wire to GND (black)
 + one solder blob bridging the RST pad to the GND pad (blue/black) see magnified view
+    OR use a very short piece of wire to create the bridge if you prefer, or have difficulty bridging the pads with a blob
 
 # Part 2 - Connecting to the Pi 🔌
 
