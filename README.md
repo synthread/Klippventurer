@@ -10,7 +10,7 @@
 ### You will need:
 
 + very basic soldering skills
-+ insulated wire, preferably silicone
++ insulated wire, multiple colors preferred
 + a soldering iron with temperature control
 + solder (preferably SnPb or SnBi solder, SnAg is harder to work with)
 + A Raspberry Pi (a Pi with built-in WiFi is preferred)
