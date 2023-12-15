@@ -1,9 +1,9 @@
 <p align="center">
-  <a>
     <img src="https://raw.githubusercontent.com/VioSynthax/Adventurer-Voxel-Klipper/2.0-preview/images/klippventurer.svg" alt="Klippventurer logo" height="185">
-2.0-preview
-    <h1 align="center">Klipper for Adventurer 3</h1>
-  </a>
+    <h1 align="center">
+      Klipper for Adventurer 3<br>
+      Raspberry Pi Edition
+    </h1>
 </p>
 
 #### You are solely responsible for any damage or injury caused by following any part of this guide.
@@ -67,7 +67,6 @@ Step 6: Apply foam tape to the bottom of the Pi. Make sure the entire bottom is 
 
 # Part 3 - The Home Stretch? 🍰
 
-# This part of the guide is unfinished. Watch this repo to receive a notification when it's ready.
-This will involve a script that configures the UART port, builds Klipper.bin for the STM32 inside the printer, and installs it over serial- all automatically. This is a huge departure from the earlier versions of this guide, where an ST-Link programmer was used to manually flash the microcontroller with a bootloader and Klipper firmware, then the Pi needed manual configuration to make serial work. This was janky, overly complicated, and just outright didn't work for most people. I don't want to call the new method foolproof just yet, but I do think it will massively simplify most of the firmware setup.
-=======
+## This part of the guide is unfinished. Watch this repo to receive a notification when it's ready.
+### This will involve a script that configures the UART port, builds Klipper.bin for the STM32 inside the printer, and installs it over serial- all automatically. This is a huge departure from the earlier versions of this guide, where an ST-Link programmer was used to manually flash the microcontroller with a bootloader and Klipper firmware, then the Pi needed manual configuration to make serial work. This was janky, overly complicated, and just outright didn't work for most people. I don't want to call the new method foolproof just yet, but I do think it will massively simplify most of the firmware setup.
 
