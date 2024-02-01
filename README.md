@@ -32,7 +32,7 @@
 
 
 Step 0: Unplug your 3D printer. Remove the bottom plastic cover from the printer (this is so we can access the power supply's DC output to power our Pi). You may choose to remove the board from the printer and place it on your work surface to make soldering easier.
-![Pin Mod Diagram](https://github.com/VioSynthax/Adventurer-Voxel-Klipper/blob/a8485fdaa321842ca7af45ca6d088fc077095493/images/Wiring-diagram.png?raw=true)
+![Pin Mod Diagram](https://github.com/VioSynthax/Klippventurer-Pi/blob/2.0-preview/images/Wiring-diagram.png?raw=true)
 
 Step 1: Locate the pads in the diagram (Wiring-diagram.png), apply flux, then tin the pads. Don't use flux on RST>GND or you'll have difficulty making a blob.
 
