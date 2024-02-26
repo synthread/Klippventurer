@@ -1,13 +1,16 @@
 <p align="center">
     <img src="https://raw.githubusercontent.com/VioSynthax/Adventurer-Voxel-Klipper/2.0-preview/images/klippventurer.svg" alt="Klippventurer logo" height="185">
     <h1 align="center">
-      Klipper for Adventurer 3<br>
-      Raspberry Pi Edition
-    </h1>
+      Klipper for FlashForge Adventurer<br>
 </p>
 
-#### You are solely responsible for any damage or injury caused by following any part of this guide.
-### You will need:
+### Welcome to the Klippventurer project!
+#### This is an unofficial port of Klipper for FlashForge printers without official Klipper support.
+#### Currently supports Adventurer 3 and its rebrands (mainboard model SZ16) 
+```TODO: link to "how to find mainboard model"```
+### You will need:  
+```TODO: move instructions to ReadTheDocs```
+```TODO: solderless install instructions```
 
 + very basic soldering skills
 + insulated wire, multiple colors preferred
