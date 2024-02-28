@@ -9,8 +9,6 @@
 #### Currently supports Adventurer 3 and its rebrands (mainboard model SZ16) 
 ```TODO: link to "how to find mainboard model"```
 ### You will need:  
-```TODO: move instructions to ReadTheDocs```
-```TODO: solderless install instructions```
 
 + very basic soldering skills
 + insulated wire, multiple colors preferred
