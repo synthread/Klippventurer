@@ -6,7 +6,7 @@
 
 ### Welcome to the Klippventurer project!
 #### This is an unofficial port of Klipper for FlashForge printers without official Klipper support.
-#### Currently supports Adventurer 3 and its rebrands (mainboard model SZ16) 
+#### Currently supports Adventurer 3, MonoPrice Voxel, and some others. See the known issues section at the bottom for exceptions to this.
 ```TODO: link to "how to find mainboard model"```
 ### You will need:  
 
@@ -107,3 +107,5 @@ Happy printing!
 Part 3 is planned to be a simple script soon.
 Please open an issue or pull request if you encounter any problems with any part of this guide.
 Still a work in progress, but I need outside testers now to get feedback on the install process and print quality.
+
+Needs testers with the N32G455 MCU, please open an issue if you have one.
