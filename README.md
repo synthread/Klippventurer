@@ -113,3 +113,4 @@ Still a work in progress, but I need outside testers now to get feedback on the 
 - N32G455 MCU doesn't work with current .config, please open an issue if you have one.
 - Can't currently support screen, buzzer, USB, filament runout sensor, or camera, as these components are connected to the MediaTek chip.
 - Adventurer 3 Pro works, but you need to switch the stepper drive types from TMC2208 to TMC2209.
+- The nozzle moves up during retraction moves. A spacer may be required to secure the nozzle better. This is probably hurting pressure advance and retraction length.
