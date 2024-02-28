@@ -102,10 +102,14 @@ sudo stm32flash -w ~/klipper/out/klipper.bin -R -i -18,23,18:-18,-23,18 /dev/tty
 ```
 You should now be able to access the Fluidd interface. If you don't get an error, go ahead and unplug the printer and reinstall the bottom cover. You may need to try restarting the firmware.
 Set it back right-side-up and power it on. Reconnect to Fluidd, cross your fingers, and hit the home button! 
+#### Calibrate your Z offset and mesh bed leveling before printing!!!
 Happy printing!
 
 Part 3 is planned to be a simple script soon.
 Please open an issue or pull request if you encounter any problems with any part of this guide.
 Still a work in progress, but I need outside testers now to get feedback on the install process and print quality.
 
-Needs testers with the N32G455 MCU, please open an issue if you have one.
+# Known Issues
+- N32G455 MCU doesn't work with current .config, please open an issue if you have one.
+- Can't currently support screen, buzzer, USB, filament runout sensor, or camera, as these components are connected to the MediaTek chip.
+- Adventurer 3 Pro works, but you need to switch the stepper drive types from TMC2208 to TMC2209.
