@@ -6,7 +6,7 @@
 
 ### Welcome to the Klippventurer project!
 #### This is an unofficial port of Klipper for FlashForge printers without official Klipper support.
-#### Currently supports Adventurer 3, MonoPrice Voxel, and some others. See the known issues section at the bottom for exceptions to this.
+#### Currently supported machines include Adventurer 3, MonoPrice Voxel, and Arçelik PT1000. See the known issues section at the bottom for exceptions to this.
 ```TODO: link to "how to find mainboard model"```
 ### You will need:  
 
