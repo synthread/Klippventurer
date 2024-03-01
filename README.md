@@ -55,7 +55,7 @@ Step 0: Download the latest Raspberry Pi Imager from https://www.raspberrypi.com
     
 Step 1: If you removed the mainboard to solder your wires, reinstall it now, but leave out the 2 screws closest to the power socket. If you left the board in, go ahead and remove those 2 screws now. Place your Pi mounting bracket on the mainboard with the two legs aligned with the holes in the mainboard. Insert the two mainboard screws through the bracket and mainboard to secure them both. Using the 4 M2.5 screws, secure the Pi to the mounting bracket.
 
-Step 2: Time to test! Plug the printer back into power, and flip the switch on. The printer **should not** boot up. Screen should remain black, mainboard LEDs should come on, the Pi should power up, and nothing else should happen. If the printer does boot normally into the stock firmware, make sure RST is bridged to GND and try again. Don't work inside the printer with the power cable connected.
+Step 2: Time to test! Plug the printer back into power, and flip the switch on. The printer **should not** boot up. Screen should remain black, mainboard LEDs should come on, the Pi should power up, and nothing else should happen. If the printer does boot normally into the stock firmware, make sure RST is bridged to GND and try again. Don't work inside the printer with the power cable connected. If all works, now is the time to clean the flux off the board with your cleaner and cotton swabs.
 
 # Part 3 - Klipper, Mainsail, Fluidd, Orca Slicer! ⛵💧🐋
 
