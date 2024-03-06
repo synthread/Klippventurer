@@ -98,7 +98,7 @@ sudo reboot
 ```
 Wait for the Pi to boot back up, SSH back in and do
 ```
-sudo stm32flash -w ~/klipper/out/klipper.bin -R -i -18,23,18:-18,-23,18 /dev/ttyAMA0
+sudo stm32flash -w ~/klipper/out/klipper.bin -R -b 115200 -i -18,23,18:-18,-23,18 /dev/ttyAMA0
 ```
 You should now be able to access the Fluidd interface. If you don't get an error, go ahead and unplug the printer and reinstall the bottom cover. You may need to try restarting the firmware.
 Set it back right-side-up and power it on. Reconnect to Fluidd, cross your fingers, and hit the home button! 
