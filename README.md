@@ -1,9 +1,10 @@
 <p align="center">
     <img src="https://raw.githubusercontent.com/VioSynthax/Adventurer-Voxel-Klipper/2.0-preview/images/klippventurer.svg" alt="Klippventurer logo" height="185">
     <h1 align="center">
-      Klipper for FlashForge Adventurer<br>
+      Klippventurer<br>
 </p>
-
+        
+[![](https://dcbadge.vercel.app/api/server/ns2pFdhdMW)](https://discord.gg/ns2pFdhdMW)
 ### Welcome to the Klippventurer project!
 #### This is an unofficial port of Klipper for FlashForge printers without official Klipper support.
 #### Currently supported machines include Adventurer 3, MonoPrice Voxel, and Arçelik PT1000. See the known issues section at the bottom for exceptions to this.
@@ -55,7 +56,7 @@ Step 0: Download the latest Raspberry Pi Imager from https://www.raspberrypi.com
     
 Step 1: If you removed the mainboard to solder your wires, reinstall it now, but leave out the 2 screws closest to the power socket. If you left the board in, go ahead and remove those 2 screws now. Place your Pi mounting bracket on the mainboard with the two legs aligned with the holes in the mainboard. Insert the two mainboard screws through the bracket and mainboard to secure them both. Using the 4 M2.5 screws, secure the Pi to the mounting bracket.
 
-Step 2: Time to test! Plug the printer back into power, and flip the switch on. The printer **should not** boot up. Screen should remain black, mainboard LEDs should come on, the Pi should power up, and nothing else should happen. If the printer does boot normally into the stock firmware, make sure RST is bridged to GND and try again. Don't work inside the printer with the power cable connected.
+Step 2: Time to test! Plug the printer back into power, and flip the switch on. The printer **should not** boot up. Screen should remain black, mainboard LEDs should come on, the Pi should power up, and nothing else should happen. If the printer does boot normally into the stock firmware, make sure RST is bridged to GND and try again. Don't work inside the printer with the power cable connected. If all works, now is the time to clean the flux off the board with your cleaner and cotton swabs.
 
 # Part 3 - Klipper, Mainsail, Fluidd, Orca Slicer! ⛵💧🐋
 
@@ -98,7 +99,7 @@ sudo reboot
 ```
 Wait for the Pi to boot back up, SSH back in and do
 ```
-sudo stm32flash -w ~/klipper/out/klipper.bin -R -i -18,23,18:-18,-23,18 /dev/ttyAMA0
+sudo stm32flash -w ~/klipper/out/klipper.bin -R -b 115200 -i -18,23,18:-18,-23,18 /dev/ttyAMA0
 ```
 You should now be able to access the Fluidd interface. If you don't get an error, go ahead and unplug the printer and reinstall the bottom cover. You may need to try restarting the firmware.
 Set it back right-side-up and power it on. Reconnect to Fluidd, cross your fingers, and hit the home button! 
