@@ -78,7 +78,7 @@ cd ~ && git clone https://github.com/dw-0/kiauh.git
 Once at the KIAUH menu, install 1) Klipper, 2) Moonraker, and 4) Fluidd. You can also install 11) Mobileraker for mobile push notifications via the Mobileraker app. 
 Exit KIAUH with B then Q and do
 ```
-git clone https://github.com/synthread/Klippventurer.git ~
+git clone https://github.com/synthread/Klippventurer.git ~/Klippventurer
 ```
 ```
 cp -r ~/Klippventurer/config/ ~/printer_data/
