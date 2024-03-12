@@ -53,7 +53,7 @@ Step 3: Solder your wires to the pads as indicated. Make sure all wires are long
 
 # Part 2 - Prepare The Pi 🪛
 
-Step 0: Download the latest Raspberry Pi Imager from https://www.raspberrypi.com/software/ Under "Raspberry Pi Device" select "Raspberry Pi Zero 2 W". For Operating System, go to "Raspberry Pi OS (other)" and select "Raspberry Pi OS (32-bit) Lite", choose your SD card, then hit next. Click "Edit Settings" Set your username and password, select your Wireless LAN country, and set your locale. Under "Services" enable SSH and select "Use password authentication" (unless you know what you're doing). Save, then click "Yes". Once done writing the SD, remove it and insert it into the Pi.
+Step 0: Download the latest Raspberry Pi Imager from https://www.raspberrypi.com/software/ Under "Raspberry Pi Device" select "Raspberry Pi Zero 2 W". For Operating System, go to "Raspberry Pi OS (other)" and select "Raspberry Pi OS (Legacy, 32-bit) Lite", choose your SD card, then hit next. Click "Edit Settings" Set your username and password, select your Wireless LAN country, and set your locale. Under "Services" enable SSH and select "Use password authentication" (unless you know what you're doing). Save, then click "Yes" and "Yes" again when it asks if you're sure you want to continue. Once done writing the SD, remove it and insert it into the Pi.
     
 Step 1: If you removed the mainboard to solder your wires, reinstall it now, but leave out the 2 screws closest to the power socket. If you left the board in, go ahead and remove those 2 screws now. Place your Pi mounting bracket on the mainboard with the two legs aligned with the holes in the mainboard. Insert the two mainboard screws through the bracket and mainboard to secure them both. Using the 4 M2.5 screws, secure the Pi to the mounting bracket.
 
@@ -68,6 +68,9 @@ Run the following commands:
 echo -e "enable_uart=1\ndtoverlay=miniuart-bt\ndtoverlay=disable-bt" | sudo tee -a /boot/config.txt
 ```
 ```
+sudo sed -e s/\ console=serial0,115200//g -i /boot/cmdline.txt
+```
+```
 sudo apt update && sudo apt install stm32flash git -y
 ```
 ```
@@ -76,7 +79,7 @@ cd ~ && git clone https://github.com/dw-0/kiauh.git
 ```
 ./kiauh/kiauh.sh
 ```
-Once at the KIAUH menu, install 1) Klipper, 2) Moonraker, and 4) Fluidd. You can also install 11) Mobileraker for mobile push notifications via the Mobileraker app. 
+Once at the KIAUH menu, install 1) Klipper, 2) Moonraker, and 4) Fluidd. You can also install Mobileraker for mobile push notifications via the Mobileraker app. 
 Exit KIAUH with B then Q and do
 ```
 git clone https://github.com/synthread/Klippventurer.git ~/Klippventurer
@@ -98,9 +101,9 @@ and if the build completes without errors,
 ```
 sudo reboot
 ```
-Wait for the Pi to boot back up, SSH back in and do
+Use the arrow keys to select 3 (Interface Options) and press Enter. Select "Serial Port" Wait for the Pi to boot back up, SSH back in and do
 ```
-sudo stm32flash -w ~/klipper/out/klipper.bin -R -b 115200 -i -18,23,18:-18,-23,18 /dev/ttyAMA0
+sudo stm32flash -w ~/klipper/out/klipper.bin -R -i -18,23,18:-18,-23,18 /dev/ttyAMA0
 ```
 You should now be able to access the Fluidd interface. If you don't get an error, go ahead and unplug the printer and reinstall the bottom cover. You may need to try restarting the firmware.
 Set it back right-side-up and power it on. Reconnect to Fluidd, cross your fingers, and hit the home button! 
