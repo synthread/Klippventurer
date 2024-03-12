@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2000 2300">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: #ddd;
+      }
+
+      .cls-2, .cls-3, .cls-4, .cls-5 {
+        opacity: .75;
+      }
+
+      .cls-2, .cls-3, .cls-4, .cls-5, .cls-6 {
+        isolation: isolate;
+      }
+
+      .cls-7 {
+        fill: #e2e2e2;
+        stroke: #000;
+        stroke-miterlimit: 10;
+        stroke-width: .5px;
+      }
+
+      .cls-8 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-9 {
+        letter-spacing: 0em;
+      }
+
+      .cls-4 {
+        fill: #b7b7b7;
+      }
+
+      .cls-10 {
+        fill: #20c0e5;
+        font-family: MyriadConceptRoman-Bold, 'Myriad Variable Concept';
+        font-size: 290px;
+        font-variation-settings: 'wght' 700, 'wdth' 100;
+      }
+
+      .cls-5 {
+        fill: #353535;
+      }
+
+      .cls-11 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-12 {
+        fill: #4f4f4f;
+      }
+
+      .cls-13 {
+        fill: #909393;
+      }
+
+      .cls-14 {
+        letter-spacing: 0em;
+      }
+
+      .cls-15 {
+        fill: #191919;
+      }
+
+      .cls-16 {
+        letter-spacing: 0em;
+      }
+
+      .cls-6 {
+        fill: url(#linear-gradient);
+        opacity: .83;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="1000" y1="20" x2="1000" y2="1980" gradientTransform="translate(0 2000) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#000"/>
+      <stop offset=".48" stop-color="#010101"/>
+      <stop offset=".66" stop-color="#080808"/>
+      <stop offset=".78" stop-color="#141213"/>
+      <stop offset=".88" stop-color="#252223"/>
+      <stop offset=".95" stop-color="#353132"/>
+      <stop offset="1" stop-color="#393939"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="791.53" y1="1757.34" x2="791.53" y2="1980" gradientTransform="translate(0 2000) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#000"/>
+      <stop offset=".51" stop-color="#353132"/>
+      <stop offset="1" stop-color="#848484"/>
+    </linearGradient>
+  </defs>
+  <g id="Layer_3" data-name="Layer 3">
+    <polygon class="cls-2" points="35.64 258 35.64 1810 72.88 1865.84 71.04 183.68 35.64 258"/>
+    <polygon class="cls-5" points="149 20 71.04 183.68 72.88 1865.84 149 1980 149 20"/>
+    <polygon class="cls-2" points="1964.36 258 1964.36 1810 1927.12 1865.84 1928.96 183.68 1964.36 258"/>
+    <polygon class="cls-5" points="1851 20 1928.96 183.68 1927.12 1865.84 1851 1980 1851 20"/>
+    <path class="cls-6" d="M1374.5,20V722.62c-.43,52.36,16.56,80.17,34.99,102.43,13.75,16.61,27.24,23.06,42.85,30.53,13.32,6.37,28.42,13.6,45.65,28.63,22.48,19.62,25.21,49.89,26.23,69.8h.29v711.33c-.18,10.67-2.47,20.53-6.82,29.33-14.17,28.69-49.67,45.85-92.7,44.84l-1211.98,.19v-1.6h-.49L208.56,20h-59.56V1980H1851V20h-476.5Z"/>
+    <rect class="cls-12" x="1457" y="289.33" width="330.67" height="420" rx="70.67" ry="70.67"/>
+    <rect class="cls-7" x="1506.33" y="406.33" width="233.33" height="269.33"/>
+    <polygon class="cls-3" points="1374.5 228 1374.5 20 1371.5 20 211.56 20 208.56 20 209.07 242.66 209.07 228 1374.5 228"/>
+    <path class="cls-4" d="M1524.21,954c-1.02-19.9-3.74-50.18-26.23-69.8-17.22-15.03-32.32-22.25-45.65-28.63-15.62-7.47-29.1-13.92-42.85-30.53-18.42-22.26-35.41-50.07-34.99-102.43V242.67H209.07l3.44,1495.43h.49v1.59l1211.98-.19c43.02,1.02,78.52-16.15,92.7-44.84,4.35-8.8,6.65-18.66,6.82-29.33V954h-.29Z"/>
+    <polygon class="cls-13" points="1374.5 228 209.07 228 209.07 242.66 209.07 242.67 1374.5 242.67 1374.5 228"/>
+    <g>
+      <rect class="cls-15" x="1659" y="1668" width="56.67" height="24"/>
+      <rect class="cls-1" x="1660.67" y="1669.54" width="53.33" height="7.9"/>
+    </g>
+  </g>
+  <text class="cls-10" transform="translate(162 2217.9)"><tspan class="cls-11" x="0" y="0">A</tspan><tspan class="cls-9" x="186.18" y="0">d</tspan><tspan class="cls-8" x="359.3" y="0">v</tspan><tspan x="508.65" y="0">e</tspan><tspan class="cls-14" x="661.77" y="0">n</tspan><tspan x="829.97" y="0">tu</tspan><tspan class="cls-16" x="1105.47" y="0">r</tspan><tspan x="1213.35" y="0">er 3</tspan></text>
+</svg>
