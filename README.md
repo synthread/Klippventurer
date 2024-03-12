@@ -66,31 +66,28 @@ Step 1: SSH into your Pi. You'll need to find the IP in your router's config pag
 Run the following commands: 
 ```
 echo -e "enable_uart=1\ndtoverlay=miniuart-bt\ndtoverlay=disable-bt" | sudo tee -a /boot/config.txt
-```
-```
+
 sudo sed -e s/\ console=serial0,115200//g -i /boot/cmdline.txt
-```
-```
+
 sudo apt update && sudo apt install stm32flash git -y
-```
-```
+
 cd ~ && git clone https://github.com/dw-0/kiauh.git
-```
-```
+
+git clone https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging.git
+
+git clone https://github.com/synthread/Klippventurer.git
+    
+ln -s ~/Klipper-Adaptive-Meshing-Purging/Configuration printer_data/config/KAMP
+
 ./kiauh/kiauh.sh
 ```
 Once at the KIAUH menu, install 1) Klipper, 2) Moonraker, and 4) Fluidd. You can also install Mobileraker for mobile push notifications via the Mobileraker app. 
 Exit KIAUH with B then Q and do
 ```
-git clone https://github.com/synthread/Klippventurer.git ~/Klippventurer
-```
-```
 cp -r ~/Klippventurer/config/ ~/printer_data/
-```
-```
+
 wget -O ~/klipper/.config https://raw.githubusercontent.com/VioSynthax/Klippventurer-Installer/main/configs/adventurer3.config
-```
-```
+
 cd ~/klipper && make menuconfig
 ```
 press Q followed by Y. Now
@@ -101,20 +98,20 @@ and if the build completes without errors,
 ```
 sudo reboot
 ```
-Use the arrow keys to select 3 (Interface Options) and press Enter. Select "Serial Port" Wait for the Pi to boot back up, SSH back in and do
+Wait for the Pi to reboot, SSH back in and do
 ```
 sudo stm32flash -w ~/klipper/out/klipper.bin -R -i -18,23,18:-18,-23,18 /dev/ttyAMA0
 ```
-You should now be able to access the Fluidd interface. If you don't get an error, go ahead and unplug the printer and reinstall the bottom cover. You may need to try restarting the firmware.
+You should now be able to access the Fluidd interface from your browser or Orca Slicer. If you don't get an error (warnings are fine), go ahead and unplug the printer and reinstall the bottom cover. You may need to try restarting the firmware.
 Set it back right-side-up and power it on. Reconnect to Fluidd, cross your fingers, and hit the home button! 
 #### Calibrate your Z offset and mesh bed leveling before printing!!!
 Happy printing!
 
-Part 3 is planned to be a simple script soon.
+This guide changes often, join our Discord or watch the repo for updates.
 Please open an issue or pull request if you encounter any problems with any part of this guide.
 Still a work in progress, but I need outside testers now to get feedback on the install process and print quality.
 
 # Known Issues
-- N32G455 MCU doesn't work with current .config, please open an issue if you have one.
+- Nation N32G MCU doesn't work with current .config, please open an issue if you have one.
 - Can't currently support screen, buzzer, USB, filament runout sensor, or camera, as these components are connected to the MediaTek chip.
-- Adventurer 3 Pro works, but you need to switch the stepper drive types from TMC2208 to TMC2209.
+- Adventurer 3 Pro works, but you need to switch the stepper driver types from TMC2208 to TMC2209.
