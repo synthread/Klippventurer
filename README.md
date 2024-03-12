@@ -7,8 +7,8 @@
 [![](https://dcbadge.vercel.app/api/server/ns2pFdhdMW)](https://discord.gg/ns2pFdhdMW)
 ### Welcome to the Klippventurer project!
 #### This is an unofficial port of Klipper for FlashForge printers without official Klipper support.
-#### Currently supported machines include Adventurer 3, MonoPrice Voxel, and Arçelik PT1000. See the known issues section at the bottom for exceptions to this.
-```TODO: link to "how to find mainboard model"```
+#### Currently supported machines include Adventurer 3, MonoPrice Voxel, Bresser Rex, and Arçelik PT1000. See the known issues section at the bottom for exceptions to this.
+
 ### You will need:  
 
 + very basic soldering skills
@@ -38,9 +38,10 @@ This will improve the maximum flow rate significantly, and coupled with the incr
 Step 1: Unplug your printer. Carefully turn the printer upside down on a soft surface so as to not scratch the top acrylic panel. Remove the 4 screws securing the metal electronics cover. You may choose to remove the board from the printer and place it on your work surface to make soldering easier. If you do, you'll need to remove the glue covering the MHF micro-coax Wi-Fi antenna cable, unplug all connectors, and remove all 4 screws securing the board.
 
 Step 2: Locate the pads in the diagram (Wiring-diagram.png), apply flux, then tin the pads.
+
 ![Pin Mod Diagram](/images/Wiring-diagram.png?raw=true)
 
-Step 2: Solder your wires to the pads as indicated. Make sure all wires are long enough to connect to your Pi, about 10cm or 4in. Strip both ends before soldering to make your life easier later (about 2mm on each end) You should connect the following to your printer's mainboard:
+Step 3: Solder your wires to the pads as indicated. Make sure all wires are long enough to connect to your Pi, about 10cm or 4in. Strip both ends before soldering to make your life easier later (about 2mm on each end) You should connect the following to your printer's mainboard:
 + one wire to TX (white)
 + one wire to RX (green)
 + one wire to MCU RST (orange)
