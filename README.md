@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="images/klippventurer.svg" alt="Klippventurer logo" height="185">
+    <img src="/images/klippventurer.svg" alt="Klippventurer logo" height="185">
     <h1 align="center">
       Klippventurer<br>
 </p>
