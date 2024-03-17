@@ -18,13 +18,16 @@
 
 ## Compatibility
 
-|Printer|Printing|Easy Installer|Pin table|Thermistor Calibration|Display|Touch|Filament Runout|Camera|
-|---|---|---|---|---|---|---|---|---|
-|Adventurer 3*|✅|⏰|✅|⏰|⏰|⏰|⏰|⏰|
-|Adventurer 4|⚠️|⏰|⏰|⚠️|⚠️|⚠️|⚠️|⚠️|
-|Creator Pro 2|⚠️|⚠️|⚠️|⚠️|⚠️|⚠️|❌|❌|
+|Printer|Printing|Easy Installer|Pin table|Printer.cfg|Thermistor Calibration|Display|Touch|Filament Runout|Camera|
+|---|---|---|---|---|---|---|---|---|---|
+|Adventurer 3/Pro*|✅|⏰|✅|✅|⏰|⏰|⏰|⏰|⏰|
+|Adventurer 3 Pro 2|❓|⏰|❓|❓|⏰|⚠️|⚠️|⚠️|⚠️|
+|Adventurer 4|⚠️|⏰|⚠️|⚠️|⏰|⚠️|⚠️|⚠️|⚠️|
+|Adventurer 5M/Pro|⚠️|⚠️|✅|⚠️|⚠️|⚠️|⚠️|⚠️|⚠️|
+|Creator Pro 2|⚠️|⚠️|❓|⚠️|⚠️|⚠️|⚠️|❌|❌|
+|Creator 3/Pro |⚠️|⏰|⚠️|⚠️|⚠️|⚠️|⚠️|❌|❌|
 
-✅Completed ⠀⠀ ⏰In Progress ⠀⠀ ⚠️Not yet Working ⠀⠀ ❌Not planned or lacks hardware feature
+✅Working ⠀⠀ ⏰In Progress ⠀⠀ ⚠️Not yet Working ⠀⠀ ❌Not planned or lacks hardware feature ⠀⠀ ❓Untested, might work
 
 >**Note:**
     "Adventurer 3" Includes the Adventurer 3C, Lite, and Pro, as well as rebrands such as the Bresser Rex, Arçelik PT1000, MonoPrice Voxel, and likely any other printer based on the SZ16 mainboard.
