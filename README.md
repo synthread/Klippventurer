@@ -23,7 +23,7 @@
 |Adventurer 3/Pro*|✅|⏰|✅|✅|⏰|⏰|⏰|⏰|⏰|
 |Adventurer 3 Pro 2|❓|⏰|❓|❓|⏰|⚠️|⚠️|⚠️|⚠️|
 |Adventurer 4|⚠️|⏰|⚠️|⚠️|⏰|⚠️|⚠️|⚠️|⚠️|
-|Adventurer 5M/Pro|⚠️|⚠️|✅|⚠️|⚠️|⚠️|⚠️|⚠️|⚠️|
+|Adventurer 5M/Pro|✅|⚠️|✅|✅|✅|✅|✅|✅|✅|
 |Creator Pro 2|⚠️|⚠️|❓|⚠️|⚠️|⚠️|⚠️|❌|❌|
 |Creator 3/Pro |⚠️|⏰|⚠️|⚠️|⚠️|⚠️|⚠️|❌|❌|
 
@@ -42,7 +42,7 @@ Please open an issue or pull request if you encounter any problems with installa
 # Known Issues
 - Nation N32G MCU doesn't work with current .config
 - Can't currently support screen, buzzer, USB, filament runout sensor, or camera. This will be solved when the easy installer is released.
-- Adventurer 3 Pro works, but you need to switch the stepper driver types from TMC2208 to TMC2209.
+- Adventurer 3 Pro works, but you need to modify printer.cfg to use TMC2208 drivers instead of TMC2209.
 
 # Special Thanks To
 [@hw-lunemann](https://github.com/hw-lunemann) for fixing UART muxing and tuning input shaper on Adventurer 3
