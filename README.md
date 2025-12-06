@@ -43,7 +43,7 @@ Please open an issue or pull request if you encounter any problems with installa
 ### Adventurer 3 Models
 - Nation N32G MCU doesn't work with current .config
 - Can't currently support screen, buzzer, USB, filament runout sensor, or camera. This will be solved when the easy installer is released.
-- Adventurer 3 Pro works, but you need to modify printer.cfg to use TMC2208 drivers instead of TMC2209.
+- Adventurer 3 Pro works, but you need to modify printer.cfg to use TMC2209 drivers instead of TMC2208.
 
 ## Special Thanks To
 [@hw-lunemann](https://github.com/hw-lunemann) for fixing UART muxing and tuning input shaper on Adventurer 3
