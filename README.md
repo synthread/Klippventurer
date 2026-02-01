@@ -1,13 +1,13 @@
-<p align="center">
-    <img src="/images/klippventurer-3.svg" alt="Klippventurer logo" height="185">
-    <h1 align="center">
-      Klippventurer<br>
-</p>
-        
-[![](https://dcbadge.vercel.app/api/server/ns2pFdhdMW)](https://discord.gg/ns2pFdhdMW)
-<h3 align="center"> Klipperize your FlashForge printer!</h4>
-    <br>
+<div align="center">
+  <img src="images/klippventurer-3.svg" alt="Klippventurer logo" height="185">
+  <h1>Klippventurer</h1>
+  <h3>Klipperize your FlashForge printer!</h3>
+  <a href="https://discord.gg/ns2pFdhdMW">
+    <img src="https://dcbadge.limes.pink/api/server/ns2pFdhdMW" alt="Discord Server">
     
+  </a>
+</div>
+
 <p align="center">
   <a href="#compatibility">Compatibility</a> •
   <a href="#installation">Installation</a> •
@@ -36,15 +36,16 @@
 For installation instructions, please see [the wiki](https://github.com/synthread/Klippventurer/wiki)
 #### Always calibrate your Z offset and mesh bed leveling after installing Klipper!!!
 
-This repo, supported features, and guides change often, join our Discord or watch the repo for updates.
+This repo, supported features, and guides change often, join our [Discord](https://discord.gg/ns2pFdhdMW) or watch the repo for updates.
 Please open an issue or pull request if you encounter any problems with installation.
 
-# Known Issues
+## Known Issues 
+### Adventurer 3 Models
 - Nation N32G MCU doesn't work with current .config
 - Can't currently support screen, buzzer, USB, filament runout sensor, or camera. This will be solved when the easy installer is released.
-- Adventurer 3 Pro works, but you need to modify printer.cfg to use TMC2208 drivers instead of TMC2209.
+- Adventurer 3 Pro works, but you need to modify printer.cfg to use TMC2209 drivers instead of TMC2208.
 
-# Special Thanks To
+## Special Thanks To
 [@hw-lunemann](https://github.com/hw-lunemann) for fixing UART muxing and tuning input shaper on Adventurer 3
 
 [@kyleisah](https://github.com/kyleisah) and everyone who contributed to [KAMP](https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging)
