@@ -1,14 +1,14 @@
 # Installation
 
-> [!CAUTION]
+> [!caution]
 > You should be familiar with installing and configuring Klipper before attempting this.
 > You are solely responsible for any damage caused by following any part of this guide.
 
-> [!WARNING]
+> [!warning]
 > This guide will soon be deprecated as this install method is considered to be in an ALPHA testing state.
 > Public testing for the BETA install method will be beginning soon, join our Discord to keep up to date with announcements.
 
-> [!WARNING]
+> [!warning]
 > CHECK your microcontroller brand before attempting this. It will only work on STM32, HK32, and GD32 MCUs. Nation N32 MCUs are not supported by this guide as they need to be programmed via a slightly different method. 
 
 ### You will need:  
@@ -41,7 +41,7 @@ Step 1: Unplug your printer. Carefully turn the printer upside down on a soft su
 
 Step 2: Locate the pads in the diagram (Wiring-diagram.png), apply flux, then tin the pads.
 
-![wiring diagram](https://github.com/synthread/Klippventurer/blob/main/images/adv3-diagram.png)
+![wiring diagram](..//images/adv3-diagram.png)
 
 Step 3: Solder your wires to the pads as indicated. Make sure all wires are long enough to connect to your Pi, about 10cm or 4in. Strip both ends before soldering to make your life easier later (about 2mm on each end) You should connect the following to your printer's mainboard:
 + one wire to TX (white)
