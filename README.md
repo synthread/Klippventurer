@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="images/klippventurer-3.svg" alt="Klippventurer logo" style="height: 185px;">
+  <img src="images/klippventurer-3.svg" alt="Klippventurer logo" height="185">
   <h1>Klippventurer</h1>
   <h3>Klipperize your FlashForge printer!</h3>
   <a href="https://discord.gg/ns2pFdhdMW">
