@@ -33,7 +33,7 @@
     "Adventurer 3" Includes the Adventurer 3C, Lite, and Pro, as well as rebrands such as the Bresser Rex, Arçelik PT1000, MonoPrice Voxel, and likely any other printer based on the SZ16 mainboard.
 
 ## Installation
-For installation instructions, please see [the docs](https://docs.synthread.ca/repositories/Klippventurer)
+For installation instructions, please see [the docs](docs/installation.md)
 #### Always calibrate your Z offset and mesh bed leveling after installing Klipper!!!
 
 This repo, supported features, and guides change often, join our [Discord](https://discord.gg/ns2pFdhdMW) or watch the repo for updates.
