@@ -8,12 +8,12 @@
   </a>
 </div>
 
-<p align="center">
+<div align="center">
   <a href="#compatibility">Compatibility</a> •
   <a href="#installation">Installation</a> •
   <a href="#known-issues">Known Issues</a> •
   <a href="#special-thanks">Special Thanks</a>
-</p>
+</div>
 
 > [!IMPORTANT]
 > `main` documents the current live Klippventurer setup: a **v0.2.x manual/soldered host install** workflow (ongoing state, not a tagged release line).
