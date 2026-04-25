@@ -15,6 +15,10 @@
   <a href="#special-thanks">Special Thanks</a>
 </p>
 
+> [!IMPORTANT]
+> `main` documents the current live Klippventurer setup: a **v0.2.x manual/soldered host install** workflow (ongoing state, not a tagged release line).
+> Looking for the next-generation stock-like USB installer work? See the preview **USB Install Branch**: [`next/firmware-package`](https://gitlab.com/synthread/3d/Klippventurer/-/tree/next/firmware-package).
+
 
 ## Compatibility
 
@@ -30,7 +34,7 @@
 ✅Working ⠀⠀ ⏰In Progress ⠀⠀ ⚠️Not yet Working ⠀⠀ ❌Not planned or lacks hardware feature ⠀⠀ ❓Untested, might work
 
 > [!NOTE]
-> "Adventurer 3" Includes the Adventurer 3C, Lite, and Pro, as well as rebrands such as the Bresser Rex, Arçelik PT1000, MonoPrice Voxel, and likely any other printer based on the SZ16 mainboard.
+> "Adventurer 3" Includes the Adventurer 3C, Lite, and Pro, as well as rebrands such as the Bresser Rex, Arçelik PT1000, MonoPrice Voxel, and potentially other printers based on the SZ16 mainboard.
 
 ## Installation
 For installation instructions, please see [the docs](docs/installation.md)
@@ -44,7 +48,7 @@ Please open an issue or pull request if you encounter any problems with installa
 ## Known Issues 
 ### Adventurer 3 Models
 - Nation N32G MCU doesn't work with current .config
-- Can't currently support screen, buzzer, USB, filament runout sensor, or camera. This will be solved when the easy installer is released.
+- Can't currently support screen, buzzer, USB, filament runout sensor, or camera. Support for these is planned as part of future USB installer work.
 - Adventurer 3 Pro works, but you need to modify printer.cfg to use TMC2209 drivers instead of TMC2208.
 
 ## Special Thanks
