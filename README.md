@@ -12,6 +12,7 @@
   <a href="#compatibility">Compatibility</a> •
   <a href="#installation">Installation</a> •
   <a href="#known-issues">Known Issues</a> •
+  <a href="docs/changelog.md">Changelog</a> •
   <a href="#special-thanks">Special Thanks</a>
 </div>
 
