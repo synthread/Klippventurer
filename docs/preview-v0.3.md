@@ -21,6 +21,17 @@ The v0.3 preview targets:
 - Product name: USB Install Branch
 - Stability: planning and implementation preview, not release-ready
 
+## Current 0.3.1 preview focus
+
+The current `0.3.1-preview` slice is still documentation-first. Its purpose is to turn the initial branch-definition work into an implementation-ready planning baseline.
+
+Primary focus areas:
+
+- safestrap and stock calibration import design,
+- Adventurer 3 N32 flashing/build planning,
+- support-policy and platform-group refinement,
+- package behavior documentation that can be tightened into implementation tasks.
+
 ## Scope for early v0.3 work
 
 ### In scope
@@ -45,7 +56,7 @@ The v0.3 preview targets:
 - `v0.2.x`: live manual/soldered install project line.
 - `v0.3.0`: first documented USB installer branch baseline.
 - `v0.3.1-preview`: active preview line after the initial branch-definition pass.
-- `v0.3.0`: first usable beta of the USB installer flow once tested enough to tag.
+- `v0.3.1`: planned docs-and-architecture maturity patch for the preview line.
 - `v0.4.0`: planned major machine-support expansion, especially tested Adventurer 5M support with tentative 5M Pro support.
 - `v1.0.0`: future stable release once the beta installer flow is ready to exit beta.
 
@@ -69,6 +80,7 @@ Current status:
 - active preview line on `next/firmware-package`
 - documentation-heavy and architecture-heavy
 - not yet a tagged patch release
+- suitable for additional docs/spec cleanup without changing the branch identity again
 
 ### `0.3.2`
 
