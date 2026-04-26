@@ -18,14 +18,14 @@
 
 > [!IMPORTANT]
 > This branch is the **USB Install Branch** for `v0.3.1-preview` planning and implementation.
-> The current live manual/soldered install flow remains on `main` / `v0.2.x`.
+> The old manual/soldered install flow remains on `main` / `v0.2.x` as a legacy reference.
 > See [docs/preview-v0.3.md](docs/preview-v0.3.md) for preview scope and version planning.
 
-Klippventurer is a work-in-progress effort to make Klipper installs on FlashForge hardware simpler, safer, and more repeatable.
+Klippventurer is a work-in-progress effort to make Klipper installs on FlashForge hardware simpler, safer, and more repeatable, with the project now moving away from soldered install paths and toward software-led installation and recovery.
 
 ## Start Here
 
-- Want the current manual install flow? Use `main` / `v0.2.x` and read [docs/installation.md](docs/installation.md).
+- Need the old hardware-assisted flow? Use `main` / `v0.2.x` and read [docs/installation.md](docs/installation.md). It is legacy, not the future direction.
 - Want to follow the next-generation installer work? Stay on `next/firmware-package` and read [docs/preview-v0.3.md](docs/preview-v0.3.md).
 - Want the deeper support and platform docs? Start in [docs/specs/](docs/specs/README.md).
 

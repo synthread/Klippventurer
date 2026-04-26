@@ -15,8 +15,8 @@ It is intended to answer three questions:
 This document covers:
 
 - Adventurer 3-family boards using Nation N32G45x MCUs
-- the existing soldered-host / UART flashing path
-- the eventual reuse of that path inside the USB installer work
+- the existing legacy hardware-assisted / UART flashing path as prior art
+- the software-first replacement path needed for USB installer work
 
 This document does not claim that N32 flashing is already working.
 
@@ -54,11 +54,11 @@ This document does not claim that N32 flashing is already working.
 
 ## What We Know Today
 
-### 1. The current manual install path excludes N32
+### 1. The current legacy manual install path excludes N32
 
 `docs/installation.md` explicitly says Nation N32 MCUs are not supported by the current guide and require a slightly different programming method.
 
-That means the existing soldered-host workflow already established a split between:
+That means the old hardware-assisted workflow already established a split between:
 
 - STM32/HK32/GD32 devices using the current `stm32flash`-style path
 - Nation N32 devices needing a different implementation
@@ -81,7 +81,7 @@ That assumption still shows up in current workflows:
 - enter the ROM bootloader by board-level strap control
 - flash `klipper.bin` over serial
 
-This matters because the present `go-flash` implementation hard-codes those assumptions.
+This matters because the present `go-flash` implementation hard-codes those assumptions even though the product direction is now to replace soldered install paths with software-led flows.
 
 ### 4. Upstream Klipper already supports N32G452/N32G455 as MCU targets
 
@@ -218,7 +218,7 @@ Recommended split:
   - erase/write flow
   - family-specific
 
-This lets us reuse Adventurer 3 board control even if the N32 serial protocol diverges from STM assumptions.
+This lets us reuse the protocol lessons from the old board-control path even if the final software-led flashing path no longer depends on soldered access.
 
 ### C. Keep the serial defaults unless evidence disproves them
 
@@ -314,7 +314,7 @@ Specific things to validate:
 - whether the same board pads are used on N32 variants
 - whether boot-entry requires the same pin polarity
 - whether reset/exit is the same after flashing
-- whether the current soldered-host wiring guide needs N32-specific notes
+- whether any temporary hardware-assisted fallback should exist during transition, or whether the software path can fully replace it
 
 ## Recommended Implementation Plan
 
@@ -445,7 +445,7 @@ Needs:
 Unless contradicted by new evidence, the safest initial implementation assumptions are:
 
 1. Start with explicit `n32g45x` family selection, not auto-detection.
-2. Reuse the current board-level UART + boot-entry wiring path.
+2. Treat the current board-level UART + boot-entry path as legacy reference behavior, not the end-state install UX.
 3. Reuse serial parity settings from the STM path for the first probe attempt.
 4. Do not mass-erase until probe + chip-id checks succeed.
 5. Treat bootloader offset as required board-profile data.
