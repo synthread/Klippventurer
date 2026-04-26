@@ -16,7 +16,7 @@
 </div>
 
 > [!IMPORTANT]
-> This branch is the **USB Install Branch** for `v0.3.0-preview` planning and implementation.
+> This branch is the **USB Install Branch** for `v0.3.1-preview` planning and implementation.
 > The current live manual/soldered install flow remains on `main` / `v0.2.x`.
 > See [docs/preview-v0.3.md](docs/preview-v0.3.md) for preview scope and version planning.
 
