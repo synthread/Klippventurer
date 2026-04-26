@@ -4,13 +4,14 @@ This document tracks the current preview push for the `next/firmware-package` br
 
 ## Release intent
 
-`v0.3.x` is the next-generation installer preview line. It is not a replacement for the current v0.2.x manual/soldered install flow yet.
+`v0.3.x` is the next-generation installer preview line. It is where Klippventurer moves away from soldered install assumptions and toward software-first installation and recovery.
 
 The v0.3 preview targets:
 
 - a stock-like USB install/update experience,
 - Adventurer 3 as the first active target,
 - Nation N32 support as the next major Adventurer 3 enablement goal,
+- deprecation of soldered install paths in favor of software solutions,
 - migration of currently working machines toward the new install flow,
 - evidence-driven support decisions based on firmware and hardware platform groups.
 
@@ -42,18 +43,18 @@ Primary focus areas:
 - Safestrap/runtime installer architecture.
 - Stock calibration capture/import planning.
 - Shared USB package layout planning.
-- Host-side setup/wrapper planning.
+- Host-side setup/wrapper planning only where it helps software-led install and recovery.
 
 ### Out of scope for first preview push
 
 - Definitive v0.3.0 release tag.
-- Replacing the live v0.2.x manual install guide.
+- Fully removing the legacy v0.2.x manual install guide before the software path is ready.
 - Shipping a final USB installer image.
 - Claiming untested rebrands or firmware versions are supported.
 
 ## Version path
 
-- `v0.2.x`: live manual/soldered install project line.
+- `v0.2.x`: legacy manual/soldered install project line.
 - `v0.3.0`: first documented USB installer branch baseline.
 - `v0.3.1-preview`: active preview line after the initial branch-definition pass.
 - `v0.3.1`: planned docs-and-architecture maturity patch for the preview line.
@@ -73,6 +74,7 @@ Documentation and planning maturity pass focused on the Adventurer 3 USB install
 - safestrap architecture and stock calibration import plan,
 - clearer supported/unsupported Adventurer 3 model framing,
 - Adventurer 3 N32 flash/build roadmap,
+- software-first replacement strategy for legacy hardware-assisted flashing,
 - package-layout and installer-behavior documentation needed before implementation claims become broader.
 
 Current status:
@@ -81,6 +83,7 @@ Current status:
 - documentation-heavy and architecture-heavy
 - not yet a tagged patch release
 - suitable for additional docs/spec cleanup without changing the branch identity again
+- explicitly deprecating soldered install as a product direction
 
 ### `0.3.2`
 
