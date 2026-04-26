@@ -1,10 +1,10 @@
 # Klippventurer v0.3 Preview Plan
 
-This document tracks the first preview push for the `next/firmware-package` branch, marketed as the **USB Install Branch**.
+This document tracks the current preview push for the `next/firmware-package` branch, marketed as the **USB Install Branch**.
 
 ## Release intent
 
-`v0.3.0` is the next-generation installer preview line. It is not a replacement for the current v0.2.x manual/soldered install flow yet.
+`v0.3.x` is the next-generation installer preview line. It is not a replacement for the current v0.2.x manual/soldered install flow yet.
 
 The v0.3 preview targets:
 
@@ -17,7 +17,7 @@ The v0.3 preview targets:
 ## Current branch status
 
 - Branch: `next/firmware-package`
-- Version line: `v0.3.0-preview`
+- Version line: `v0.3.1-preview`
 - Product name: USB Install Branch
 - Stability: planning and implementation preview, not release-ready
 
@@ -43,14 +43,15 @@ The v0.3 preview targets:
 ## Version path
 
 - `v0.2.x`: live manual/soldered install project line.
-- `v0.3.0-preview`: USB installer branch preview with Adventurer 3/N32 as the first new target.
+- `v0.3.0`: first documented USB installer branch baseline.
+- `v0.3.1-preview`: active preview line after the initial branch-definition pass.
 - `v0.3.0`: first usable beta of the USB installer flow once tested enough to tag.
 - `v0.4.0`: planned major machine-support expansion, especially tested Adventurer 5M support with tentative 5M Pro support.
 - `v1.0.0`: future stable release once the beta installer flow is ready to exit beta.
 
 ## Planned patch roadmap
 
-The branch is currently in `v0.3.0-preview`, not in a released `0.3.1` patch yet.
+The branch is currently in `v0.3.1-preview`, not in a released `0.3.1` patch yet.
 
 The patch roadmap below is the current planning breakdown for the preview line and early beta hardening.
 
@@ -62,6 +63,12 @@ Documentation and planning maturity pass focused on the Adventurer 3 USB install
 - clearer supported/unsupported Adventurer 3 model framing,
 - Adventurer 3 N32 flash/build roadmap,
 - package-layout and installer-behavior documentation needed before implementation claims become broader.
+
+Current status:
+
+- active preview line on `next/firmware-package`
+- documentation-heavy and architecture-heavy
+- not yet a tagged patch release
 
 ### `0.3.2`
 
