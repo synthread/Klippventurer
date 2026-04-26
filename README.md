@@ -18,7 +18,7 @@
 
 > [!IMPORTANT]
 > `main` documents the current live Klippventurer setup: a **v0.2.x manual/soldered host install** workflow (ongoing state, not a tagged release line).
-> Looking for the next-generation stock-like USB installer work? See the preview **USB Install Branch**: [`next/firmware-package`](./tree/next/firmware-package).
+> Looking for the next-generation stock-like USB installer work? See the preview **USB Install Branch**: [`next/firmware-package`](https://gitlab.com/synthread/3d/Klippventurer/-/tree/next/firmware-package).
 
 
 ## Compatibility
