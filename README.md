@@ -1,7 +1,7 @@
 <div align="center">
   <img src="images/klippventurer-3.svg" alt="Klippventurer logo" height="185">
   <h1>Klippventurer</h1>
-  <h3>Klipperize your FlashForge printer!</h3>
+  <h3>Upgrade your FlashForge with Klipper.</h3>
   <a href="https://discord.gg/ns2pFdhdMW">
     <img src="https://dcbadge.limes.pink/api/server/ns2pFdhdMW" alt="Discord Server">
     
@@ -9,8 +9,9 @@
 </div>
 
 <div align="center">
+  <a href="#start-here">Start Here</a> •
   <a href="#compatibility">Compatibility</a> •
-  <a href="#installation">Installation</a> •
+  <a href="#docs">Docs</a> •
   <a href="#known-issues">Known Issues</a> •
   <a href="#special-thanks">Special Thanks</a>
 </div>
@@ -20,25 +21,34 @@
 > The current live manual/soldered install flow remains on `main` / `v0.2.x`.
 > See [docs/preview-v0.3.md](docs/preview-v0.3.md) for preview scope and version planning.
 
+Klippventurer is a work-in-progress effort to make Klipper installs on FlashForge hardware simpler, safer, and more repeatable.
+
+## Start Here
+
+- Want the current manual install flow? Use `main` / `v0.2.x` and read [docs/installation.md](docs/installation.md).
+- Want to follow the next-generation installer work? Stay on `next/firmware-package` and read [docs/preview-v0.3.md](docs/preview-v0.3.md).
+- Want the deeper support and platform docs? Start in [docs/specs/](docs/specs/README.md).
 
 ## Compatibility
 
-|Printer|Printing|Easy Installer|Pin table|Printer.cfg|Thermistor Calibration|Display|Touch|Filament Runout|Camera|
-|---|---|---|---|---|---|---|---|---|---|
-|Adventurer 3/Pro*|✅|⏰|✅|✅|⏰|⏰|⏰|⏰|⏰|
-|Adventurer 3 Pro 2|❓|⏰|❓|❓|⏰|⚠️|⚠️|⚠️|⚠️|
-|Adventurer 4|⚠️|⏰|⚠️|⚠️|⏰|⚠️|⚠️|⚠️|⚠️|
-|Adventurer 5M/Pro|✅|⚠️|✅|✅|✅|✅|✅|✅|✅|
-|Creator Pro 2|⚠️|⚠️|❓|⚠️|⚠️|⚠️|⚠️|❌|❌|
-|Creator 3/Pro |⚠️|⏰|⚠️|⚠️|⚠️|⚠️|⚠️|❌|❌|
+| Printer family | Current state | Notes |
+|---|---|---|
+| Adventurer 3 family* | `working` manual path, `preview` USB installer path | Main focus of `v0.3.x`, including N32 enablement work. |
+| Adventurer 3 Pro 2 | `experimental` | Treat separately until board and installer behavior are better pinned down. |
+| Adventurer 4 family | `not yet working` | Active research, not ready for install claims. |
+| Adventurer 5M / 5M Pro | `working` in current repo context | Separate platform family from ADV3 installer work. |
+| Creator Pro 2 / Creator 3 family | `not yet working` | Not part of the current USB installer focus. |
 
-✅Working ⠀⠀ ⏰In Progress ⠀⠀ ⚠️Not yet Working ⠀⠀ ❌Not planned or lacks hardware feature ⠀⠀ ❓Untested, might work
+For the detailed user-facing matrix, see [docs/specs/support-matrix.md](docs/specs/support-matrix.md).
 
 > [!NOTE]
 > "Adventurer 3" Includes the Adventurer 3C, Lite, and Pro, as well as rebrands such as the Bresser Rex, Arçelik PT1000, MonoPrice Voxel, and likely any other printer based on the SZ16 mainboard.
 
-## Installation
-For installation instructions, please see [the docs](docs/installation.md)
+## Docs
+
+- [Preview plan](docs/preview-v0.3.md)
+- [Installation guide](docs/installation.md)
+- [Specs and support docs](docs/specs/README.md)
 
 > [!WARNING]
 > Always calibrate your Z offset and mesh bed leveling after installing Klipper!
@@ -48,8 +58,8 @@ Please open an issue or pull request if you encounter any problems with installa
 
 ## Known Issues 
 ### Adventurer 3 Models
-- Nation N32G MCU doesn't work with current .config
-- Can't currently support screen, buzzer, USB, filament runout sensor, or camera. This will be solved when the easy installer is released.
+- Nation N32G MCU support is still under active flashing/build-target work.
+- Screen, buzzer, USB, filament runout, and camera support are part of the longer-term easy-installer direction, not the current manual path.
 - Adventurer 3 Pro works, but you need to modify printer.cfg to use TMC2209 drivers instead of TMC2208.
 
 ## Special Thanks

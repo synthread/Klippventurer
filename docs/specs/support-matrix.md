@@ -22,8 +22,8 @@ See also:
 
 | Brand / model / SKU | Platform group | Status | Config profile attempted | Known warnings | Evidence / confidence |
 |---|---|---|---|---|---|
-| FlashForge Adventurer 3 | `adv3-sz16-family` | `supported` | `adv3-sz16-baseline` | Feature coverage still varies by firmware/peripherals. | Repo compatibility shows ADV3 working ([../../README.md](../../README.md)); confidence: `confirmed` |
-| FlashForge Adventurer 3 Pro | `adv3-sz16-family` | `supported` | `adv3-sz16-pro` (TMC2209 delta) | May require TMC2209-specific config handling. | Known issues note TMC2209 adjustment ([../../README.md#known-issues](../../README.md#known-issues)); confidence: `confirmed` |
+| FlashForge Adventurer 3 | `adv3-sz16-family` | `supported` | `adv3-sz16-baseline` | Manual path works; USB installer path is still preview work. | Repo compatibility shows ADV3 working ([../../README.md](../../README.md)); confidence: `confirmed` |
+| FlashForge Adventurer 3 Pro | `adv3-sz16-family` | `supported` | `adv3-sz16-pro` (TMC2209 delta) | May require TMC2209-specific config handling; N32 board variants still need explicit flashing support. | Known issues note TMC2209 adjustment ([../../README.md#known-issues](../../README.md#known-issues)); confidence: `confirmed` |
 | FlashForge Adventurer 3C | `adv3-sz16-family` | `untested-likely` | `adv3-sz16-baseline` | Validate board/MCU variant before assuming parity with ADV3. | Included in ADV3 family note ([../../README.md](../../README.md)); confidence: `likely` |
 | FlashForge Adventurer 3 Lite | `adv3-sz16-family` | `untested-likely` | `adv3-sz16-baseline` | Validate bed/nozzle defaults and peripheral differences. | Included in ADV3 family note; package analysis indicates MIPS + older monolithic updater style for classic/Lite stock lineage; confidence: `confirmed` |
 | Monoprice Voxel | `adv3-sz16-family` | `untested-likely` | `adv3-sz16-baseline` | Rebrand differences may affect assets/peripherals. | Included in ADV3 rebrand note ([../../README.md](../../README.md)); confidence: `likely` |
@@ -45,6 +45,13 @@ See also:
 - `unsupported` and `unknown` should fail closed by default.
 - Advanced override can exist, but must require explicit user acknowledgement of risks.
 - Where board/MCU evidence suggests probable compatibility but no direct test exists, keep status at `untested-likely`.
+
+## Developer reading notes
+
+- Treat this file as the user-facing naming layer.
+- For implementation grouping, always cross-check [platform-groups.md](./platform-groups.md).
+- For status promotion, follow [firmware-policy.md](./firmware-policy.md).
+- For MCU-family questions, especially N32, cross-check [n32-flashing-implementation.md](./n32-flashing-implementation.md).
 
 ## Current priority notes
 

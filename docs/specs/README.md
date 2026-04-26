@@ -52,3 +52,11 @@ Related project docs:
 
 - [../../README.md](../../README.md)
 - [../installation.md](../installation.md)
+
+## Architecture decision records
+
+- [adr-0001-safestrap-first-stage.md](./adr-0001-safestrap-first-stage.md)
+- [adr-0002-package-layout-and-rootfs-reuse.md](./adr-0002-package-layout-and-rootfs-reuse.md)
+- [adr-0003-kernel-strategy.md](./adr-0003-kernel-strategy.md)
+- [adr-0004-static-analysis-decision-tree.md](./adr-0004-static-analysis-decision-tree.md)
+- [adr-0005-runtime-overlay-and-recovery.md](./adr-0005-runtime-overlay-and-recovery.md)

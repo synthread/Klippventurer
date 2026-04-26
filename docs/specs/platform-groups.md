@@ -33,6 +33,12 @@ First target for the shared bridge/shim package.
 - Core profile: `supported`/`experimental` depending on exact board + MCU evidence.
 - Rebrands: typically `untested-likely` unless confirmed by board/firmware evidence.
 
+### Developer focus right now
+
+- keep ADV3 installer work scoped to the smallest board-profile set that can be validated,
+- treat N32 support as transport/build-target work first, not as a README-only status problem,
+- avoid broad rebrand claims until board markings, MCU family, and updater behavior are captured.
+
 ---
 
 ## Group: `adv4-family`
@@ -65,6 +71,12 @@ Likely ARMv7 Linux-generation platform, distinct from ADV3 SZ16 MIPS/monolithic 
 
 - Default `experimental` or `unknown` until board + firmware internals are confirmed.
 
+### Developer focus right now
+
+- keep ADV4-family findings as research and bridge-candidate work,
+- do not let clearer ADV4 package internals drive unsupported installer promises for ADV3,
+- promote statuses only when config, flashing, and runtime behavior line up.
+
 ---
 
 ## Group: `adv5m-t113-family`
@@ -92,6 +104,11 @@ Newer Linux platform associated with existing AD5M mod ecosystem.
 ### Support stance
 
 - Bridge-oriented path is likely practical first; onboard strategy remains separate work.
+
+### Developer focus right now
+
+- use ADV5M work mainly as design prior art for safety, gating, and persistence,
+- avoid assuming ADV5M runtime/layout decisions copy directly onto ADV3-class hardware.
 
 ---
 
