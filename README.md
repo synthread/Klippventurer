@@ -8,12 +8,17 @@
   </a>
 </div>
 
-<p align="center">
+<div align="center">
   <a href="#compatibility">Compatibility</a> •
   <a href="#installation">Installation</a> •
   <a href="#known-issues">Known Issues</a> •
   <a href="#special-thanks">Special Thanks</a>
-</p>
+</div>
+
+> [!IMPORTANT]
+> This branch is the **USB Install Branch** for `v0.3.0-preview` planning and implementation.
+> The current live manual/soldered install flow remains on `main` / `v0.2.x`.
+> See [docs/preview-v0.3.md](docs/preview-v0.3.md) for preview scope and version planning.
 
 
 ## Compatibility
