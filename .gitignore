@@ -1,0 +1,12 @@
+.DS_Store
+
+# Local search and analysis state
+.codesearch.db/
+.firmware-analysis/
+
+# Local dependency/vendor worktrees pending curation
+deps/
+vendor/
+
+# Local tool/runtime state
+tools/
