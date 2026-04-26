@@ -473,3 +473,25 @@ The safest path is:
 2. probe N32 compatibility with the existing serial bootloader assumptions,
 3. lock board-specific application offsets and target IDs,
 4. only then wire the flow into the USB installer work.
+
+## Current `go-flash` Implementation Status
+
+As of the current `deps/go-flash` local work, the implementation has moved beyond a pure skeleton:
+
+- `TargetFamilySTM32` remains the default path for existing users.
+- `TargetFamilyN32G45` explicitly selects the experimental N32 path.
+- N32 uses the STM-compatible ROM bootloader handshake and command flow based on the best available evidence that N32G452/G455 are mostly STM32F103-compatible.
+- N32 flashing validates payload range before erase/write.
+- N32 flashing supports configurable `TargetFlashBase` and `TargetFlashSize` so board profiles can account for 28KiB, 64KiB, or other application offsets.
+- N32 flashing fails closed without `ExpectedChipIDs` unless `AllowUnknownChipID` is set for hardware bring-up.
+- Non-hardware tests cover flash-range validation and identity-prefix compatibility.
+
+This is tentatively ready for controlled hardware bring-up, not broad user release.
+
+Remaining gates before calling it hardware-ready:
+
+1. Capture the actual bootloader chip ID for an Adventurer 3 N32 board.
+2. Confirm whether `GET`, `GET ID`, `ERASE`, and `WRITE MEMORY` behave byte-for-byte like STM32 ROM bootloader commands on the target board.
+3. Confirm correct Adventurer 3 N32 application address and allowed flash range.
+4. Confirm that the legacy boot-entry/reset sequence still puts the N32 board into ROM bootloader mode.
+5. Perform repeated flash/reboot/recovery cycles on real hardware.
