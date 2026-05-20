@@ -1,0 +1,7 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "gitlab>synthread/infra/renovate//presets/default",
+    "gitlab>synthread/infra/renovate//presets/docker"
+  ]
+}
