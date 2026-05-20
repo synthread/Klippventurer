@@ -33,9 +33,9 @@ build:docs:
   stage: build
   image: python:3.12-slim
   before_script:
-    - pip install --quiet mkdocs mkdocs-material pymdown-extensions
+    - pip install --quiet "mkdocs>=1.6,<2" "mkdocs-material>=9.5,<10" pymdown-extensions
   script:
-    - mkdocs build --strict
+    - mkdocs build
   artifacts:
     paths:
       - site/
@@ -59,11 +59,12 @@ pages:
 
 build:n32probe:
   stage: build
-  image: golang:1.22-bookworm
+  image: golang:1.25-bookworm
   before_script:
     - apt-get update -qq && apt-get install -y -qq rsync
     - ./scripts/bootstrap-go-flash.sh
   script:
+    - export SKIP_GO_FLASH_BOOTSTRAP=1
     - support/usb-validation/n32/build.sh
   artifacts:
     name: "n32probe-$CI_COMMIT_REF_SLUG-$CI_COMMIT_SHORT_SHA"

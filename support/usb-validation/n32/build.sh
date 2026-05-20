@@ -16,8 +16,11 @@ if [ -z "${GO:-}" ]; then
   fi
 fi
 export GO
+export GOTOOLCHAIN=${GOTOOLCHAIN:-auto}
 
-"$REPO_ROOT/scripts/bootstrap-go-flash.sh"
+if [ "${SKIP_GO_FLASH_BOOTSTRAP:-}" != "1" ]; then
+  "$REPO_ROOT/scripts/bootstrap-go-flash.sh"
+fi
 
 mkdir -p "$OUT"
 cp "$SCRIPT_DIR/flashforge_init.sh" "$OUT/flashforge_init.sh"
