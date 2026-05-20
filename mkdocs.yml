@@ -1,0 +1,51 @@
+site_name: Klippventurer
+site_description: Klipper-powered upgrades for FlashForge Adventurer printers
+site_url: https://synthread.gitlab.io/proj/Klippventurer/
+repo_url: https://gitlab.com/synthread/proj/Klippventurer
+edit_uri: edit/main/docs/
+
+docs_dir: docs
+
+theme:
+  name: material
+  features:
+    - navigation.expand
+    - navigation.sections
+    - content.code.copy
+
+extra:
+  preview_banner: false
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Preview plan: preview-v0.3.md
+  - Installation (legacy): installation.md
+  - Uninstall (legacy): uninstall-soldered.md
+  - N32 roadmap: n32-adventurer3-roadmap.md
+  - Adventurer 4 research: adventurer-4-research.md
+  - Specs:
+      - Overview: specs/README.md
+      - Support matrix: specs/support-matrix.md
+      - Platform groups: specs/platform-groups.md
+      - Firmware policy: specs/firmware-policy.md
+      - Firmware analysis: specs/firmware-analysis.md
+      - N32 flashing: specs/n32-flashing-implementation.md
+      - Safestrap / calibration: specs/safestrap-calibration-plan.md
+      - ADR 0001: specs/adr-0001-safestrap-first-stage.md
+      - ADR 0002: specs/adr-0002-package-layout-and-rootfs-reuse.md
+      - ADR 0003: specs/adr-0003-kernel-strategy.md
+      - ADR 0004: specs/adr-0004-static-analysis-decision-tree.md
+      - ADR 0005: specs/adr-0005-runtime-overlay-and-recovery.md
+
+plugins:
+  - search
+
+hooks:
+  - ci/mkdocs_hooks.py

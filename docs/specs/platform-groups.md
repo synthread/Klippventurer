@@ -93,7 +93,7 @@ Newer Linux platform associated with existing AD5M mod ecosystem.
 ### Evidence
 
 - Community/vendor mod ecosystem reports T113-S3 + 128MB-class environment (needs package-level verification per model).
-- Project compatibility marks 5M/Pro as working in current repo context: [../../README.md](../../README.md)
+- Project compatibility now treats 5M/Pro as pending validation rather than currently working coverage: [../../README.md](../../README.md)
 - Factory ADV5M package analysis indicates ARMv7 packaging with `MACHINE=Adventurer5M`, `PID=0023`, kernel-family reference `5.6.0-svn539`, and control bundle usage of `NationsCommand`.
 
 ### Known deltas
@@ -103,11 +103,12 @@ Newer Linux platform associated with existing AD5M mod ecosystem.
 
 ### Support stance
 
-- Bridge-oriented path is likely practical first; onboard strategy remains separate work.
+- Bridge-oriented path remains a likely first route, but this family stays in research/validation status until repo-side flashing + runtime evidence is in place.
 
 ### Developer focus right now
 
 - use ADV5M work mainly as design prior art for safety, gating, and persistence,
+- treat ADV5M/Pro findings as bridge-candidate context, not as a currently working family claim,
 - avoid assuming ADV5M runtime/layout decisions copy directly onto ADV3-class hardware.
 
 ---
