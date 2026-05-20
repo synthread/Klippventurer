@@ -1,5 +1,2 @@
 include:
-  - project: synthread/docs-viewer
-    ref: main
-    file: ci/docs-repo.yml
-
+  - local: ci/docs-repo.yml

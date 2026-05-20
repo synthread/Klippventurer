@@ -10,3 +10,4 @@ vendor/
 
 # Local tool/runtime state
 tools/
+build/

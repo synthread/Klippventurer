@@ -4,7 +4,7 @@
 
 | Surface | Current value | Notes |
 | --- | --- | --- |
-| `.lens` guidance version | `2026-04-25b` | Added inbox-role guidance and raw-artifact boundary |
+| `.lens` guidance version | `2026-05-19` | Single-repo policy, SSH deploy runbook, OTA preview schema, CI docs runbook |
 | Public-doc promotion status | `draft` | Intended to move into broader docs later |
 
 ## Update Rules

@@ -19,6 +19,8 @@ Do not use `.lens/` as:
 
 - [`.lens` spec sheet](lens-spec.md)
 - [`.lens` version table](lens-version-table.md)
+- [Single-repo policy](policies/single-repo.md)
+- [Kalicoforge rename checklist (v0.4.0)](policies/kalicoforge-rename-v0.4.md)
 
 ## Relationship To Server Memory
 

@@ -58,7 +58,7 @@ Primary focus areas:
 - `v0.3.0`: first documented USB installer branch baseline.
 - `v0.3.1-preview`: active preview line after the initial branch-definition pass.
 - `v0.3.1`: planned docs-and-architecture maturity patch for the preview line.
-- `v0.4.0`: planned major machine-support expansion, especially tested Adventurer 5M support with tentative 5M Pro support.
+- `v0.4.0`: planned major machine-support expansion, including Adventurer 5M validation/polish work with tentative Adventurer 5M Pro follow-up.
 - `v1.0.0`: future stable release once the beta installer flow is ready to exit beta.
 
 ## Planned patch roadmap
