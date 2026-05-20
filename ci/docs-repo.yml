@@ -31,7 +31,7 @@ variables:
 
 build:docs:
   stage: build
-  image: python:3.12-slim
+  image: python:3.14-slim@sha256:a7185a8e40af01bf891414a4df16ef10fc6000cee460a404a13da9029fe41604
   before_script:
     - pip install --quiet "mkdocs>=1.6,<2" "mkdocs-material>=9.5,<10" pymdown-extensions
   script:
