@@ -31,7 +31,7 @@ variables:
 
 build:docs:
   stage: build
-  image: python:3.12-slim
+  image: python:3.12-slim@sha256:9d3abd9fc11d06998ccdbdd93b4dd49b5ad7d67fcbbc11c016eb0eb2c2194891
   before_script:
     - pip install --quiet "mkdocs>=1.6,<2" "mkdocs-material>=9.5,<10" pymdown-extensions
   script:
@@ -59,7 +59,7 @@ pages:
 
 build:n32probe:
   stage: build
-  image: golang:1.25-bookworm
+  image: golang:1.25-bookworm@sha256:1aafe6fe7d35f8f3cfd654ceb1bbd2cac8a0df4464afa2679e0ae60aba32efd8
   before_script:
     - apt-get update -qq && apt-get install -y -qq rsync
     - ./scripts/bootstrap-go-flash.sh
