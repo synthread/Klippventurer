@@ -59,7 +59,7 @@ pages:
 
 build:n32probe:
   stage: build
-  image: golang:1.25-bookworm
+  image: golang:1.26-bookworm@sha256:5742fba27b66a3532bdbee81351ddd1d1033c0d5d90e04f576f72165d734939d
   before_script:
     - apt-get update -qq && apt-get install -y -qq rsync
     - ./scripts/bootstrap-go-flash.sh
