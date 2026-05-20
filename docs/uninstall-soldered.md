@@ -5,7 +5,7 @@ Reverting your printer to stock firmware is easy. Simply remove your wires from 
 ## Troubleshooting
 Sometimes, this built-in recovery mechanism can fail to reinstall the original firmware. In this case, you will need to reinstall the firmware manually. Thankfully, this is easy to do and only requires a USB flash drive. Steps are as follows: 
 
-0) Download the latest firmware for your printer from the manufacturer's website. For the FlashForge branded Adventurer 3, it can be found [here.](https://www.flashforge.com/download-center/77) For rebrands, you can likely find your firmware on the seller's website by Googling "\<printer name> firmware" or you can try using the official firmware from FlashForge. Some models such as the MonoPrice Voxel can unlock additional features by using official firmware instead of firmware from the printer's distributor.
+0) Download the latest firmware for your printer from the manufacturer's website. For the FlashForge branded Adventurer 3, it can be found [here.](https://archive.org/details/adv-3-firmware) For rebrands, you can likely find your firmware on the seller's website by Googling "\<printer name> firmware" or you can try using the official firmware from FlashForge. Some models such as the MonoPrice Voxel can unlock additional features by using official firmware instead of firmware from the printer's distributor.
 
 > [!CAUTION]
 > Do not use a flash drive containing any important files, you will need to erase this drive.

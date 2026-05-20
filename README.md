@@ -20,6 +20,8 @@
 
 > [!IMPORTANT]
 > This branch is the **USB Install Branch** for the `v0.3.x` preview line. It is where Klippventurer is becoming a packaged, stock-like upgrade path for FlashForge Adventurer printers.
+>
+> The stable **v0.2.x manual/soldered host install** line lives on [`main`](https://gitlab.com/synthread/proj/Klippventurer/-/tree/main).
 
 Klippventurer is an open-source effort to make Klipper installs on FlashForge Adventurer hardware simpler, safer, and more repeatable. The project is shifting toward a USB-based installer, model-aware compatibility checks, stock calibration import, and recovery tooling that feels approachable for everyday printer owners.
 
@@ -102,6 +104,14 @@ A formal porting guide is planned for `v0.3.3+`. Until then, bring research and 
 
 > [!WARNING]
 > Klipper conversions can move motors and heat components in ways stock firmware did not. Always validate the target printer, firmware, Z offset, bed mesh, and thermal behavior before trusting a converted machine.
+
+## Known issues (legacy v0.2.x manual install)
+
+These apply to the hardware-assisted path on `main`, not the in-development USB installer:
+
+- Nation N32G MCU is not supported by the legacy manual guide; N32 work is tracked under the USB preview line.
+- Screen, buzzer, USB, filament runout sensor, and camera are not supported on the legacy path; USB installer work may revisit peripherals.
+- Adventurer 3 Pro may require TMC2209 driver settings in `printer.cfg` instead of TMC2208.
 
 ## Special Thanks
 
