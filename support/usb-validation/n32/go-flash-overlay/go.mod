@@ -7,7 +7,7 @@ require (
 	github.com/pkg/errors v0.9.1
 	github.com/sirupsen/logrus v1.9.4
 	go.bug.st/serial v1.7.1
-	golang.org/x/exp v0.0.0-20260529124908-c761662dc8c9
+	golang.org/x/exp v0.0.0-20260603202125-055de637280b
 )
 
 require (
