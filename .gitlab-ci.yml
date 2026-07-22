@@ -1,5 +1,17 @@
-include:
-  - project: synthread/docs-viewer
-    ref: main
-    file: ci/docs-repo.yml
+# Stable v0.2.x (manual/soldered) line.
+# Preview USB installer CI lives on next/firmware-package / preview/* — not here.
+# Replaced inaccessible synthread/docs-viewer include so pipelines can create.
 
+stages:
+  - test
+
+docs:status:
+  stage: test
+  image: alpine:3.20
+  script:
+    - echo "main documents the v0.2.x manual/soldered install path."
+    - echo "USB installer preview CI is on next/firmware-package."
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+      when: never
